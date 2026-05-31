@@ -3,22 +3,22 @@ import tanstackNotes from "../../../api/tanStack_notes.json";
 import { TanStack } from "../../UI/TanStack";
 
 export const TanStackNotes = () => {
-  const [data, setData] = useState([]);
-  const [activeID, setActiveID] = useState(false);
+  // const [data, setData] = useState([]);
+  const [activeID, setActiveID] = useState(null);
 
-  useEffect(() => {
-    setData(tanstackNotes);
-  }, []);
+  // useEffect(() => {
+  //   setData(tanstackNotes);
+  // }, []);
 
   const handleButtonToggle = (id) => {
-    setActiveID((prevID) => (prevID === id ? false : id));
+    setActiveID((prevID) => (prevID === id ? null : id));
   };
 
   return (
     <div>
       <h1>TanStack Notes</h1>
       <ul className="section-accordion">
-        {data.map((curEle) => {
+        {tanstackNotes.map((curEle) => {
           return (
             <TanStack
               key={curEle.id}
