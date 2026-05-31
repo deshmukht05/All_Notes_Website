@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "What is QueryClientProvider?",
+    "answer": "In React Query, the QueryClientProvider is a crucial component that provides a query client instance to your React application. This QueryClient is responsible for managing all the data fetching, caching and state management related to your queries."
+  },
+  {
+    "id": 2,
+    "title": "What is QueryKey?",
+    "answer": "The queryKey is typically an array or string that uniquely identifies a query. It allows React Query to determine if the data in the cache is associated with a particular request. It is used to cache data with a specific key and refetch or update data when certain dependencies change."
+  },
+  {
+    "id": 3,
+    "title": "What is useQuery?",
+    "answer": "Fetches and Reads data (GET requests) from an API and automatically caches the result."
+  },
+  {
+    "id": 4,
+    "title": "What is gcTime (Garbage Collection Time)?",
+    "answer": "The cacheTime option in React Query is renamed to gcTime. When you use React Query to get data, it saves the result in a local cache. This means if you ask for the same data again, React Query will give you the saved data instead of making another API request. The cache updates automatically if data changes, so you always get the latest information. By default, inactive queries are garbage collected after 5 minutes. This means that if React Query is not in use for 5 minutes, the cache for that query will be cleaned up."
+  },
+  {
+    "id": 5,
+    "title": "What is staleTime?",
+    "answer": "In React Query, staleTime is a configuration option that determines how long fetched data is considered fresh before it needs to be refetched.\n\nHow it works:\n- Fresh Data: When data is initially fetched or updated, it's considered fresh.\n- Stale Data: After the staleTime duration (specified in milliseconds) elapses, the data is considered stale.\n- Default Value: The default staleTime is 0, meaning data becomes stale immediately after being fetched. This ensures data is up-to-date but can lead to frequent refetching."
+  },
+  {
+    "id": 6,
+    "title": "What is Polling?",
+    "answer": "In React Query, polling refers to the technique of fetching data from an API at regular intervals to keep the UI up-to-date with the latest information. This is especially useful for scenarios where data changes frequently and you want to display real-time updates without requiring the user to refresh the page manually.\n\n- 'refetchInterval' option: The simplest way to enable polling is to pass the 'refetchInterval' option to the 'useQuery' hook. This option specifies the interval (in milliseconds) at which React Query should automatically refetch the data.\n\n- 'refetchIntervalInBackground' option: If you want to continue polling even when the component is not mounted, you can use the 'refetchIntervalInBackground' option. When you want to fetch the data even in background or you are in another tab."
+  },
+  {
+    "id": 7,
+    "title": "What is useMutation?",
+    "answer": "The useMutation hook is a part of React Query and used for operations that modify data like Create, Update and Delete (CRUD Operations).\n\nSyntax:\nconst mutation = useMutation(mutationFn, {\n  // Optional configuration options\n});\n\nConfiguration options:\n- onSuccess: A callback function that runs when the mutation is successful.\n- onError: A callback function that runs when mutation fails.\n- onSettled: A callback function that runs regardless of success or fail.\n- mutationKey: A unique key to identify the mutation in the cache."
+  },
+  {
+    "id": 8,
+    "title": "What is Mutate()?",
+    "answer": "The mutate function is used to execute the mutation in React Query. The process is the same whether you are:\n- Deleting data\n- Updating data\n- Creating new data\n\nWhen you call .mutate(), it tells React Query to run the mutation function defined inside the useMutation hook. This is needed because mutation is an action that changes data unlike queries, which are used to fetch data and are often auto-executed."
+  },
+  {
+    "id": 9,
+    "title": "What is queryClient.setQueryData?",
+    "answer": "queryClient.setQueryData is used to update the cached data for a specific query. In this case, it's the query with the key ['posts', pageNumber], which likely represents the list of posts on the current page."
+  },
+  {
+    "id": 10,
+    "title": "What is the flow of useInfiniteQuery?",
+    "answer": "First Render → QueryFn will fetch 1st page → getNextPageParam → Reach Bottom && hasNextPage → Fetch Next Page → getNextPageParam"
+  }
+]

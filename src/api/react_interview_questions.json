@@ -1,0 +1,555 @@
+[
+  {
+    "id": 1,
+    "question": "What is React?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "React is an open source JavaScript library use to build user interface designed by Facebook."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Explain JSX.",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "1. JSX stands for JavaScript XML. It allows you to write HTML elements in JavaScript and place them in the DOM without any createElement() and appendChild() methods."
+      },
+      {
+        "text": "2. Writing HTML code in JavaScript is JSX."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "What is virtual DOM?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "The virtual DOM is the lightweight copy of the actual DOM in memory. React uses it to improve performance by updating only the changed parts of the actual DOM."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What is the significance of keys in React?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "Keys are used to uniquely identify and differentiate between components in React. They help React identify which items have changed, added, or removed."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What are the state and props in React?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "State is an internal data store that belongs to a specific component, and it can be changed over time. Props are properties passed to a component from its parent, and they are immutable."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What is the difference between state and props?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "State is internal to a component and can be changed over time, while props are external and passed to a component."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Explain the concept of lifting state up.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Lifting state up is a pattern where the state of a child component is moved to its parent component, allowing multiple child components to share the same state."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What is the purpose of setState in React?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "setState is used to update the state of a component and trigger a re-render."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What is React Router?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "React Router is a library that enables navigation among views in a React application, allowing for the development of single-page applications."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Explain the useEffect hook.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "The useEffect hook in React is used for side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "What are controlled components in React?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Controlled components are components where the form data is controlled by React state. The input elements receive their current value from the state and have their value updated through a callback function."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "What is Redux, and why it is used?",
+    "category": "State Management",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Redux is a state management library for JavaScript applications, commonly used with React. It helps to manage the state of an application in a predictable way."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Explain the concept of high-order components (HOC).",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "Higher-order components are functions that take a component and return a new component with additional features or props."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "What is the purpose of useReducer hook?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "The useReducer hook is used for managing complex state logic in React applications. It is an alternative to useState when state transitions are more complex."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "What is the significance of the key attribute in React lists?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "The key attribute is used to uniquely identify elements in a list. It helps React efficiently update the DOM when the list changes."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "question": "What is the difference between class components and functional components?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "class components use ES6 classes and have additional features like state and lifecycle methods, while functional components are simpler and are often used with hooks."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Explain the concept of refs in React.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Refs are used to access the DOM directly or to reference a React element. They provide a way to interact with the underlying DOM nodes in React."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "question": "What are React hooks?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "React hooks are functions that allow functional components to use state, lifecycle methods, and other React features."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Explain the concept of the useContext hook.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "The useContext hook is used to access the value of a React context within a functional component."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "What is the significance of the dangerouslySetInnerHTML property in React?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "dangerouslySetlnnerHTML is used to inject HTML directly into a component, but it should be used with caution to avoid cross-site scripting (XSS) vulnerabilities."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "question": "What is the purpose of the componentDidMount lifecycle method?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "componentDidMount is invoked immediately after a component is mounted, making it suitable for initial AJAX requests or setting up subscriptions."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "question": "What is the React developer tool?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "The React Developer Tools is a browser extension that allows developers to inspect and debug React component hierarchies in the Chrome and Firefox browsers."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "question": "Explain the concept of context in React.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Context provides a way to pass data through the component tree without having to pass props manually at every level. It is often used to share values like themes or authentication status."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "question": "What are advantages of using React?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "React offers a virtual DOM for improved performance, a component-based architecture for modular development, and a strong community support, among other advantages."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "question": "How does React handle prop drilling, and how can it be avoided?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Prop drilling occurs when props are passed down through multiple levels of components. It can be avoided by using context or state management libraries like Redux."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "question": "What is the purpose of the shouldComponentUpdate method?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "shouldComponentUpdate is a lifecycle method that determines if a component should re-render. Developers can use it to optimize performance by preventing unnecessary renders."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "question": "Explain the significance of React Fragments.",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "React Fragments allow developers to group multiple elements without adding an extra node to the DOM, helping to keep the structure clean."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "question": "What is the significance of the key prop in React Router?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "The key prop in React Router is used to force the remounting of a component when the key changes, ensuring that the component is fully reinitialized."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "question": "What is the purpose of the forwardRef function in React?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "forwardRef is used to forward refs through components, allowing parent components to interact with the child's DOM node."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "question": "Explain the concept of error boundaries in React.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Error boundaries are components that catch JavaScript errors anywhere in their child component tree and log those errors, display a fallback IJI, or take other actions."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "question": "What is the significance of the memo function in React?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "memo is a higher-order component that memorizes the rendering of a functional component, preventing unnecessary re-renders if the props have not changed."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "question": "How does React handle forms?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "React handles forms by using controlled components, where form data is controlled by the React state."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "question": "Explain the purpose of the useMemo hook.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "The useMemo hook is used to memorize the result of a function, preventing unnecessary calculations and improving performance."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "question": "What is the significance of the useCallback hook?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "useCallback is used to memoize callback functions, preventing them from being recreated on every render."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "question": "What are React portals?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "React portals provide a way to render children into a DOM node that exists outside the parent component's hierarchy."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "question": "Explain the concept of suspense in React.",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "Suspense is a feature in React that allows components to 'wait' for something before rendering, such as data fetching or code splitting."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "question": "What is the purpose of the useEffect cleanup function?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "The cleanup function in useEffect is used to perform cleanup tasks, such as unsubscribing from subscriptions or clearing intervals, when a component is unmounted."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "question": "How does React handle routing?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "React can handle routing using the React Router library, which provides a way to navigate between different views or pages in a React application."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "question": "What is the purpose of the useLayoutEffect hook?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "useLayoutEffect is similar to useEffect, but it fires synchronously after all DOM mutations. It is often used for measuring and synchronizing layout."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "question": "Explain the concept of lazy loading in React.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Lazy loading is a technique where components or modules are loaded only when they are actually needed, improving initial load times."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "question": "What is the significance of the React.memo function?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "React.memo is a higher-order component that memoizes the rendering of a functional component, preventing unnecessary re-renders if the props have not changed."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "question": "How does React handle code splitting?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "React supports code splitting, allowing developers to split their code into smaller chunks that are loaded on demand, improving performance by reducing the initial bundle size."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "question": "What is the purpose of the useImperativeHandle hook?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "useImperativeHandle is used to customize the instance value that is exposed when using React.forwardRef."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "question": "Explain the concept of the useDebugValue hook.",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "useDebugValue is used to display a label for custom hooks in React DevTools."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "question": "What is the purpose of the useState hook?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "The useState hook is used to add state to functional components in React."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "question": "Explain the significance of the SuspenseList component in React.",
+    "category": "React",
+    "difficulty": "Expert",
+    "answer": [
+      {
+        "text": "SuspenseList is a component that allows developers to coordinate the loading of multiple components in a way that provides a better user experience."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "question": "What is the significance of the react-scripts package in a React application?",
+    "category": "React",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "react-scripts is a set of scripts and configurations used by Create React App to set up and manage a React project without the need for complex configuration."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "question": "Explain the concept of error boundaries in React.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Error boundaries are components that catch JavaScript errors anywhere in their child component tree and log those errors, display a fallback IJI, or take other actions."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "question": "What is the purpose of the useReducer hook?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "useReducer is a hook in React used for state management in functional components. It is particularly useful when the state logic is complex and involves multiple sub-values or when the next state depends on the previous state."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "question": "How does React handle forms?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "React handles forms using controlled components, where the form elements are controlled by React state. This allows React to be the single source of truth for the form data."
+      }
+    ]
+  }
+]

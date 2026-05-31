@@ -1,0 +1,544 @@
+[
+  {
+    "id": 1,
+    "question": "Why does setTimeout inside a for loop with var behave differently than with let?",
+    "category": "JavaScript",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "When using 'var' in a for loop, the variable is function-scoped, not block-scoped. All setTimeout callbacks share the same 'i' reference, which will be the final value after the loop completes. With 'let', each iteration gets its own block-scoped 'i', preserving the value at that moment. This is due to JavaScript's closure behavior and how var doesn't create a new binding per iteration."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What happens when you try to modify a const object vs const array?",
+    "category": "JavaScript",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "const prevents reassignment of the variable itself, but doesn't make the object/array immutable. You can modify properties of a const object (object.key = value) and modify elements of a const array (array.push(), array[0] = newValue). However, you cannot reassign the entire object/array (obj = {} or arr = []). For deep immutability, you'd need Object.freeze(), Immer, or immutable libraries."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Explain why typeof null returns 'object' and how you handle this.",
+    "category": "JavaScript",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "This is a historical bug in JavaScript that persists for backward compatibility. In the original implementation, values were represented with type tags, and null was represented as the null pointer (0x00) which was also the object tag. To check for null, use strict equality: if (value === null). For a robust type check that distinguishes null from objects, use: Object.prototype.toString.call(value) or a combination of typeof value === 'object' && value !== null."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "How do you check if a variable is actually an array in JavaScript?",
+    "category": "JavaScript",
+    "difficulty": "Beginner",
+    "answer": [
+      {
+        "text": "The most reliable method is Array.isArray(variable). Alternatives include: variable instanceof Array (fails across iframes/realms), Object.prototype.toString.call(variable) === '[object Array]' (works across realms), or variable.constructor === Array (can be overridden). Array.isArray() is the recommended modern approach as it handles edge cases correctly."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What's the difference between call, apply, and bind with real examples?",
+    "category": "JavaScript",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "call(): Invokes function immediately with comma-separated arguments: func.call(thisArg, arg1, arg2). apply(): Invokes immediately with array of arguments: func.apply(thisArg, [arg1, arg2]). bind(): Returns new function with bound this, can be called later: const bound = func.bind(thisArg, arg1). Real example: Using call for method borrowing, apply for variable arguments, bind for event handlers where you need to maintain context."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Why would you use useCallback and useMemo, and when do they hurt performance?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "useCallback memoizes functions, useMemo memoizes values to prevent unnecessary re-renders. Use them when passing callbacks to memoized child components or for expensive calculations. They hurt performance when used unnecessarily - every memoization has overhead. Over-memoizing can actually be slower than just recalculating. Only use when you have proven performance issues, not preemptively. Rules: useMemo for expensive calculations (O(n) or worse), useCallback for functions passed to React.memo components."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "How do you handle memory leaks in React applications?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "1. Always clean up subscriptions, timers, and event listeners in useEffect cleanup functions."
+      },
+      {
+        "text": "2. Cancel pending API requests when component unmounts using AbortController."
+      },
+      {
+        "text": "3. Avoid storing large data in state that isn't needed."
+      },
+      {
+        "text": "4. Be careful with closures that hold references to large objects."
+      },
+      {
+        "text": "5. Use WeakMap/WeakSet for caches."
+      },
+      {
+        "text": "6. Monitor with Chrome DevTools memory profiler."
+      },
+      {
+        "text": "7. Implement proper cleanup in custom hooks."
+      },
+      {
+        "text": "8. For event listeners added to window/document, always remove them."
+      },
+      {
+        "text": "9. Use React DevTools to track component mounts/unmounts."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What happens if you don't return anything from useEffect cleanup function?",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Nothing negative happens - the cleanup function is optional. However, if your effect creates subscriptions, timers, or event listeners, not returning a cleanup will cause memory leaks because those side effects won't be cleaned up when the component unmounts or before the next effect runs. For effects without cleanup needs (like logging on mount), omitting the return is fine. Best practice: always return cleanup for any effect that creates persistent side effects."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Explain React.StrictMode and why your useEffect runs twice in development.",
+    "category": "React",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "React.StrictMode is a wrapper that activates additional checks and warnings for its descendants. In development, it intentionally double-invokes effects (mount → unmount → mount) to help detect side effect issues and memory leaks. This doesn't happen in production. It also warns about deprecated APIs, unsafe lifecycle methods, and unexpected side effects. It's a development tool to help write more robust code, not a bug."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "How do you share logic between components without props or context?",
+    "category": "React",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "1. Custom Hooks: Extract logic into reusable hooks (e.g., useWindowSize, useLocalStorage)."
+      },
+      { "text": "2. Render Props pattern." },
+      { "text": "3. Higher-Order Components (HOCs)." },
+      { "text": "4. State management libraries (Redux, Zustand)." },
+      { "text": "5. Component composition." },
+      { "text": "6. Singleton services/modules." },
+      { "text": "7. Event emitters for loosely coupled communication." },
+      { "text": "8. React's Context API (but that uses props indirectly)." },
+      { "text": "9. useRef with singleton pattern." },
+      {
+        "text": "Custom hooks are the modern recommended approach as they're composable and don't alter component hierarchy."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "How do you handle z-index conflicts in large applications?",
+    "category": "CSS",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "1. Establish a z-index system using CSS custom properties or a SCSS map (e.g., $z-layers: (modal: 1000, dropdown: 100, tooltip: 200))."
+      },
+      { "text": "2. Use consistent naming conventions (z-index tokens)." },
+      {
+        "text": "3. Limit z-index usage to specific components like modals, tooltips, dropdowns."
+      },
+      {
+        "text": "4. Create new stacking contexts with transform, opacity, or will-change to isolate layers."
+      },
+      { "text": "5. Avoid arbitrary large numbers like 9999." },
+      { "text": "6. Document your z-index scale." },
+      { "text": "7. Use CSS-in-JS libraries to enforce consistency." },
+      {
+        "text": "Prefer flexbox/grid positioning over absolute positioning when possible."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "What's the difference between visibility: hidden and display: none for screen readers?",
+    "category": "CSS",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "display: none removes the element from the accessibility tree entirely - screen readers won't announce it, and it takes no space. visibility: hidden hides the element visually but may still affect layout, and screen reader behavior varies by browser (some ignore it, some announce). For accessibility: Use display: none to completely hide content. Use aria-hidden='true' for visual-only elements. For visually hiding but keeping accessible, use a visually-hidden class (position: absolute, width: 1px, overflow: hidden). This is crucial for skip links and screen-reader-only text."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "How do you create smooth animations that don't block the main thread?",
+    "category": "CSS",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "1. Use transform and opacity animations (compositor-thread friendly)."
+      },
+      {
+        "text": "2. Avoid animating layout properties like width, height, top, left (triggers reflow)."
+      },
+      { "text": "3. Use will-change hint for elements that will animate." },
+      { "text": "4. Use requestAnimationFrame for JavaScript animations." },
+      { "text": "5. Offload work to Web Workers for heavy calculations." },
+      { "text": "6. Use CSS transitions instead of JavaScript when possible." },
+      { "text": "7. Implement transform: translateZ(0) to create GPU layer." },
+      { "text": "8. Use the FLIP technique for layout animations." },
+      {
+        "text": "9. Avoid forcing synchronous layouts (measuring after mutations)."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Explain why margin collapse happens and how to prevent it.",
+    "category": "CSS",
+    "difficulty": "Intermediate",
+    "answer": [
+      {
+        "text": "Margin collapse occurs when vertical margins of adjacent block-level elements combine into a single margin (taking the larger value). It happens with: adjacent siblings, parent-child (no padding/border/content between), empty blocks. Purpose: maintain natural spacing. Prevention methods:"
+      },
+      { "text": "1. Add padding or border to parent." },
+      { "text": "2. Use flexbox or grid." },
+      { "text": "3. Set overflow: auto/hidden." },
+      { "text": "4. Use display: inline-block." },
+      { "text": "5. Use gap in flex/grid." },
+      { "text": "6. Add a small padding (0.1px)." },
+      { "text": "7. Use margin only on one direction consistently." },
+      {
+        "text": "Modern approach: Use gap with flex/grid to avoid margin collapse entirely."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "question": "How do you make images responsive without breaking aspect ratios?",
+    "category": "CSS",
+    "difficulty": "Intermediate",
+    "answer": [
+      { "text": "1. Use max-width: 100%; height: auto; on images." },
+      { "text": "2. Use aspect-ratio CSS property (modern)." },
+      {
+        "text": "3. The padding-top hack for legacy support (padding-top: 56.25% for 16:9)."
+      },
+      { "text": "4. Use object-fit: cover/contain for precise control." },
+      { "text": "5. Use picture element with multiple sources." },
+      {
+        "text": "6. Set width and height attributes in HTML (browser uses them for aspect ratio)."
+      },
+      { "text": "7. Use srcset for responsive images." },
+      { "text": "8. Use CSS container queries for container-aware sizing." },
+      {
+        "text": "Modern best practice: width: 100%; height: auto; plus aspect-ratio: 16/9; object-fit: cover; for consistent boxes."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "question": "How do you handle race conditions in API calls?",
+    "category": "JavaScript",
+    "difficulty": "Advanced",
+    "answer": [
+      { "text": "1. Use AbortController to cancel previous pending requests." },
+      {
+        "text": "2. Use request deduplication with libraries like React Query."
+      },
+      {
+        "text": "3. Track latest request timestamp/ID and ignore outdated responses."
+      },
+      { "text": "4. Use debouncing for search inputs." },
+      { "text": "5. Use useEffect cleanup to ignore results when unmounted." },
+      { "text": "6. Implement request memoization." },
+      { "text": "7. Use SWR (stale-while-revalidate) pattern." },
+      { "text": "8. Use Promise cancellation patterns." },
+      { "text": "9. For sequential requests, use async/await properly." },
+      { "text": "10. Implement request keys to ensure latest data wins." },
+      {
+        "text": "Example: let activeRequest = null; if (activeRequest) activeRequest.abort(); activeRequest = new AbortController();"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "question": "What's your strategy for handling slow internet connections?",
+    "category": "Performance",
+    "difficulty": "Advanced",
+    "answer": [
+      { "text": "1. Implement skeleton loaders for perceived performance." },
+      { "text": "2. Use lazy loading for images and components." },
+      { "text": "3. Implement retry logic with exponential backoff." },
+      { "text": "4. Show offline/connectivity indicators." },
+      { "text": "5. Cache data using Service Workers (Workbox)." },
+      { "text": "6. Implement optimistic UI updates." },
+      { "text": "7. Use progressive loading strategies." },
+      { "text": "8. Implement request batching." },
+      { "text": "9. Use connection-aware features (Network Information API)." },
+      { "text": "10. Reduce initial bundle size with code splitting." },
+      { "text": "11. Implement fallback UI for failed requests." },
+      { "text": "12. Use IndexedDB for offline storage." },
+      {
+        "text": "Strategy: detect connection with navigator.connection, provide offline-first experience, implement retry patterns, and always give user feedback."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "question": "How do you implement infinite scrolling without performance issues?",
+    "category": "Performance",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "1. Use Intersection Observer API (not scroll events) for detecting end of list."
+      },
+      {
+        "text": "2. Implement virtual scrolling (react-window, react-virtualized) to render only visible items."
+      },
+      { "text": "3. Throttle/debounce load triggers." },
+      { "text": "4. Use pagination to limit data in memory." },
+      { "text": "5. Implement cache for loaded pages." },
+      { "text": "6. Clean up detached DOM nodes." },
+      { "text": "7. Use useCallback for scroll handlers." },
+      { "text": "8. Implement buffer zones for smoother loading." },
+      {
+        "text": "9. Consider windowing libraries for massive lists (10k+ items)."
+      },
+      { "text": "10. Remove elements far outside viewport." },
+      { "text": "11. Use requestIdleCallback for non-critical updates." },
+      { "text": "12. Keep DOM size reasonable (< 1000 nodes)." }
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Explain how you would detect and handle memory leaks in production.",
+    "category": "Performance",
+    "difficulty": "Expert",
+    "answer": [
+      { "text": "Detection:" },
+      { "text": "1. Use Performance Monitoring tools (Sentry, Datadog)." },
+      { "text": "2. Implement heap snapshot logging on user actions." },
+      {
+        "text": "3. Monitor memory usage via Performance API (performance.memory)."
+      },
+      { "text": "4. Set up alerts for memory threshold." },
+      { "text": "5. Use Chrome DevTools remotely (debugging protocols)." },
+      { "text": "6. Implement periodic memory checks." },
+      { "text": "Handling:" },
+      { "text": "1. Automatic cleanup systems." },
+      { "text": "2. Force garbage collection hints (not guaranteed)." },
+      { "text": "3. Implement max cache size with LRU eviction." },
+      { "text": "4. Add component unmount logging." },
+      { "text": "5. Create memory profiler integration." },
+      { "text": "6. Implement leak detection hooks in development." },
+      { "text": "7. Use WeakRef for non-critical caches." },
+      {
+        "text": "Strategy: Sample memory usage from 1% of users, alert on 50% growth over baseline, provide session replay to debug."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "question": "How do you make your website work when JavaScript fails to load?",
+    "category": "JavaScript",
+    "difficulty": "Advanced",
+    "answer": [
+      { "text": "1. Use noscript tags for critical content." },
+      {
+        "text": "2. Implement server-side rendering (SSR) or static site generation."
+      },
+      {
+        "text": "3. Progressive enhancement - HTML/CSS first, JS as enhancement."
+      },
+      { "text": "4. Ensure all navigation works with proper href links." },
+      { "text": "5. Use <a> tags for navigation, not just event handlers." },
+      { "text": "6. Validate forms on server-side as backup." },
+      { "text": "7. Display meaningful messages about JS requirements." },
+      { "text": "8. Use core web vitals monitoring for JS failures." },
+      { "text": "9. Implement graceful degradation for interactivity." },
+      { "text": "10. Use feature detection before using JS APIs." },
+      {
+        "text": "11. Critical content should be in HTML, not injected via JS."
+      },
+      { "text": "12. Use Edge Side Includes (ESI) for dynamic content." }
+    ]
+  },
+  {
+    "id": 21,
+    "question": "User reports a bug that only happens on mobile Safari - how do you debug it?",
+    "category": "Debugging",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "1. Connect iOS device to Mac and use Safari Web Inspector (Develop menu)."
+      },
+      { "text": "2. Use remote debugging tools (BrowserStack, LambdaTest)." },
+      {
+        "text": "3. Replicate with responsive design mode + user agent spoofing."
+      },
+      {
+        "text": "4. Check Safari-specific issues (date parsing, flexbox bugs, position: sticky)."
+      },
+      { "text": "5. Review iOS version differences." },
+      {
+        "text": "6. Enable Web Inspector on device (Settings → Safari → Advanced)."
+      },
+      { "text": "7. Use console.log via remote connection." },
+      { "text": "8. Test with WebKit nightly build." },
+      { "text": "9. Check for iOS keyboard handling bugs." },
+      { "text": "10. Verify if it's a caching issue (hard reload on iOS)." },
+      { "text": "11. Check Safari's Intelligent Tracking Prevention." },
+      { "text": "12. Use console.trace() to see flow." },
+      { "text": "13. Add detailed error logging to backend." },
+      {
+        "text": "Common culprits: Safari's strict date parsing, 100vh issues, async/await differences, missing polyfills."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "question": "Your app is slow but only for users with older devices - what do you check?",
+    "category": "Performance",
+    "difficulty": "Advanced",
+    "answer": [
+      { "text": "1. CPU throttling in DevTools to simulate old devices." },
+      {
+        "text": "2. Check for expensive JavaScript operations (bundles, polyfills)."
+      },
+      { "text": "3. Reduce main thread work - break up long tasks." },
+      { "text": "4. Check for forced synchronous layouts/reflows." },
+      { "text": "5. Analyze CSS selector complexity." },
+      { "text": "6. Reduce React re-renders with memoization." },
+      { "text": "7. Check memory usage and garbage collection pauses." },
+      { "text": "8. Implement hardware-accelerated animations." },
+      { "text": "9. Reduce bundle size with code splitting." },
+      { "text": "10. Check for render-blocking resources." },
+      { "text": "11. Optimize images (WebP, lazy loading)." },
+      { "text": "12. Use Web Workers for heavy processing." },
+      { "text": "13. Implement virtual scrolling if listing many items." },
+      { "text": "14. Check third-party scripts." },
+      { "text": "15. Use performance budget for older devices." },
+      {
+        "text": "Tools: Lighthouse with throttling, WebPageTest with Moto G4 settings."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "question": "How do you handle a situation where your API suddenly starts returning different data?",
+    "category": "API",
+    "difficulty": "Advanced",
+    "answer": [
+      {
+        "text": "1. Immediate: Add error boundaries in React to prevent crashes."
+      },
+      {
+        "text": "2. Implement Zod or TypeScript runtime validation on API responses."
+      },
+      { "text": "3. Add versioning to API endpoints." },
+      { "text": "4. Create fallback/default values for missing fields." },
+      { "text": "5. Implement schema validation middleware." },
+      { "text": "6. Add monitoring for schema mismatches." },
+      { "text": "7. Communicate with backend team about breaking changes." },
+      { "text": "8. Implement feature flags to rollback or adapt." },
+      {
+        "text": "9. Add defensive coding: optional chaining (?.), nullish coalescing (??)."
+      },
+      {
+        "text": "10. Create adapters to transform new format to expected format."
+      },
+      { "text": "11. Add tests that mock old and new API responses." },
+      { "text": "12. Implement gradual rollout of API changes." },
+      {
+        "text": "Strategy: Never trust external data - validate at boundaries, provide graceful degradation, and monitor anomalies."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "question": "A feature works in development but breaks in production - what's your debugging process?",
+    "category": "Debugging",
+    "difficulty": "Advanced",
+    "answer": [
+      { "text": "Step-by-step process:" },
+      {
+        "text": "1. Check if React StrictMode is in dev only (double renders)."
+      },
+      {
+        "text": "2. Compare bundle sizes - production minification changes variable names."
+      },
+      { "text": "3. Check environment variables (.env vs .env.production)." },
+      { "text": "4. Verify API endpoints (dev vs prod URLs)." },
+      {
+        "text": "5. Check if the issue is from tree-shaking removing needed code."
+      },
+      { "text": "6. Compare build configurations (webpack/vite settings)." },
+      {
+        "text": "7. Test with production build locally (npm run build && serve -s build)."
+      },
+      { "text": "8. Check sourcemaps for error stack traces." },
+      {
+        "text": "9. Verify caching issues (CDN, service workers, browser cache)."
+      },
+      {
+        "text": "10. Check if it's a race condition only appearing with minified code."
+      },
+      {
+        "text": "11. Add detailed logging to production (but be careful with PII)."
+      },
+      { "text": "12. Check for missing polyfills (Browserslist config)." },
+      { "text": "13. Validate CSP headers not blocking scripts." },
+      { "text": "14. Use feature detection, not browser detection." },
+      {
+        "text": "Pro tip: Add verbose logging with environment-specific flags."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "question": "How do you prioritize performance fixes when you have limited time?",
+    "category": "Performance",
+    "difficulty": "Expert",
+    "answer": [
+      { "text": "Prioritization framework:" },
+      {
+        "text": "1. Measure first - use Lighthouse, Web Vitals, React DevTools profiler."
+      },
+      {
+        "text": "2. Impact vs effort matrix - fix high-impact, low-effort items first."
+      },
+      { "text": "3. Focus on user-perceived performance (LCP, FID, CLS)." },
+      { "text": "4. Fix render blocking resources (highest priority)." },
+      { "text": "5. Reduce bundle size (code splitting, tree shaking)." },
+      { "text": "6. Optimize images (often highest ROI)." },
+      { "text": "7. Implement virtualization for long lists." },
+      { "text": "8. Add memoization for expensive calculations." },
+      { "text": "9. Fix memory leaks (prevents degradation over time)." },
+      { "text": "10. Optimize slow database queries on backend." },
+      {
+        "text": "11. Add loading states and skeleton screens (perceived performance)."
+      },
+      { "text": "12. Set performance budgets and monitoring." },
+      {
+        "text": "Order: Critical rendering path fixes > Image optimization > Bundle optimization > Runtime optimization > Progressive enhancements."
+      },
+      {
+        "text": "Always measure before/after: 'If you can't measure it, you can't improve it.'"
+      },
+      {
+        "text": "Management proverb: Fix the 20% of issues causing 80% of the slowness (Pareto principle)."
+      }
+    ]
+  }
+]
