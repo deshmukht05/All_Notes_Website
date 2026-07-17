@@ -8,7 +8,7 @@ export const FrontendIntLabel = ({ curData, isActive, onToggle }) => {
       <div className="accordion-grid">
         <div className="accordion-grid-2">
           <p className="accordion-question">
-            {id}: {question}
+            {id}. {question}
           </p>
           <p className="accordion-subtitle">
             Category: {category}, Difficulty: {difficulty}

@@ -5,6 +5,7 @@ import { TanStackNotes } from "../Pages/TanStack Notes/TanStackNotes";
 import { FrontendInterview } from "../Pages/Frontend Interview/FrontendInterview";
 import { ReduxNotes } from "../Pages/Redux Notes/ReduxNotes";
 import { PythonNotesData } from "../Pages/Python Notes/PythonNotesData";
+import { SQLNotes } from "../Pages/SQL Notes/SQLNotes";
 
 export const AppLayout = () => {
   const [activeTab, setActiveTab] = useState("react");
@@ -48,6 +49,12 @@ export const AppLayout = () => {
         >
           Python
         </button>
+        <button
+          onClick={() => setActiveTab("mysql")}
+          className={activeTab === "mysql" ? "active-tab" : "dective-tab"}
+        >
+          MySQL
+        </button>
       </div>
 
       {activeTab === "react" && <ReactNotes />}
@@ -56,6 +63,7 @@ export const AppLayout = () => {
       {activeTab === "react-int" && <ReactInterview />}
       {activeTab === "front-int" && <FrontendInterview />}
       {activeTab === "python" && <PythonNotesData />}
+      {activeTab === "mysql" && <SQLNotes />}
     </div>
   );
 };

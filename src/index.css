@@ -6,11 +6,11 @@
 }
 
 .layout-display {
-  @apply grid grid-cols-2 gap-2 mx-5 sm:flex sm:flex-row sm:gap-10 m-auto items-center justify-center mb-8 sm:mb-12;
+  @apply grid grid-cols-2 gap-2 mx-5 sm:flex sm:flex-row sm:gap-5 m-auto items-center justify-center mb-8 sm:mb-12;
 }
 
 .section-accordion {
-  @apply sm:w-2xl mx-5 sm:m-auto mt-4 sm:mt-6 flex flex-col gap-5 text-white justify-center;
+  @apply sm:w-2xl mx-5 sm:m-auto mt-4 sm:mt-6 flex flex-col gap-6 text-white justify-center;
 }
 
 h1 {
@@ -18,11 +18,19 @@ h1 {
 }
 
 .accordion-grid {
-  @apply flex gap-5 justify-between items-center bg-gray-900 py-2 px-4 sm:py-4 sm:px-6;
+  @apply flex gap-5 rounded-t-xl justify-between items-center bg-gray-900 py-2 px-4 sm:py-4 sm:px-6;
 }
 
 .accordion-question {
   @apply text-sm sm:text-lg font-medium tracking-wide text-white;
+}
+
+.content-accordion {
+  @apply bg-gray-900 px-3 py-2 sm:px-6 sm:pb-4 rounded-b-xl;
+}
+
+p {
+  @apply text-sm sm:text-lg;
 }
 
 /* Toggle Button */
@@ -41,14 +49,6 @@ h1 {
 
 .dective-tab {
   @apply bg-gray-900 px-4 py-2 text-sm sm:text-lg border-2 border-gray-700 text-white rounded-4xl cursor-pointer hover:border-gray-500 transition-all duration-200;
-}
-
-.content-accordion {
-  @apply bg-gray-900 px-3 py-2 sm:px-6 sm:pb-4;
-}
-
-p {
-  @apply text-sm sm:text-lg;
 }
 
 /* TanStack */
@@ -79,5 +79,11 @@ iframe {
 }
 
 .iframeWrapper {
-  @apply flex w-full h-[200px] sm:h-[400px] overflow-hidden;
+  @apply w-full h-[200px] sm:h-[400px] overflow-hidden;
+}
+
+
+/* MySQL Notes */
+.iframeWrapper-sql {
+  @apply w-full h-[400px] sm:h-[600px] overflow-hidden relative;
 }

@@ -6,7 +6,7 @@ export const React = ({ curData, isActive, onToggle }) => {
   return (
     <li key={id}>
       <div className="accordion-grid">
-        <p className="accordion-question">{id}: {title}</p>
+        <p className="accordion-question">{id}. {title}</p>
         <button
           onClick={onToggle}
           className={isActive ? "active-btn" : "deactive-btn"}

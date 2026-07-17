@@ -30,7 +30,7 @@ export const PythonNotesData = () => {
                       title={title}
                       loading="lazy"
                       onLoad={() => setIsLoading(false)}
-                    ></iframe>
+                     />
                   </div>
               </li>
             );

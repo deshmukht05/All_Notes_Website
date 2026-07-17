@@ -7,7 +7,7 @@ export const ReduxLabel = ({ curData, isActive, onToggle }) => {
     <li>
       <div className="accordion-grid">
         <p className="accordion-question">
-          {id}: {question}
+          {id}. {question}
         </p>
         <button
           onClick={onToggle}
