@@ -6,7 +6,7 @@
 }
 
 .layout-display {
-  @apply grid grid-cols-2 mx-5 sm:flex sm:flex-row gap-2 sm:gap-10 m-auto items-center justify-center mb-8 sm:mb-12;
+  @apply grid grid-cols-2 gap-2 mx-5 sm:flex sm:flex-row sm:gap-10 m-auto items-center justify-center mb-8 sm:mb-12;
 }
 
 .section-accordion {
@@ -63,4 +63,21 @@ p {
 
 .accordion-grid-2 {
   @apply flex flex-col gap-1;
+}
+
+/* Python Notes */
+.topic-grid {
+  @apply flex rounded-xl justify-between items-center bg-gray-900 py-2 px-4 sm:py-4 sm:px-6;
+}
+
+iframe {
+  @apply w-full h-full mt-2;
+}
+
+.loading-text {
+  @apply text-center flex items-center justify-center m-auto;
+}
+
+.iframeWrapper {
+  @apply flex w-full h-[200px] sm:h-[400px] overflow-hidden;
 }

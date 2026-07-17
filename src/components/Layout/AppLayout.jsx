@@ -3,6 +3,8 @@ import { ReactNotes } from "../Pages/React Notes/ReactNotes";
 import { ReactInterview } from "../Pages/React Interview/ReactInterview";
 import { TanStackNotes } from "../Pages/TanStack Notes/TanStackNotes";
 import { FrontendInterview } from "../Pages/Frontend Interview/FrontendInterview";
+import { ReduxNotes } from "../Pages/Redux Notes/ReduxNotes";
+import { PythonNotesData } from "../Pages/Python Notes/PythonNotesData";
 
 export const AppLayout = () => {
   const [activeTab, setActiveTab] = useState("react");
@@ -17,16 +19,22 @@ export const AppLayout = () => {
           React
         </button>
         <button
-          onClick={() => setActiveTab("react-int")}
-          className={activeTab === "react-int" ? "active-tab" : "dective-tab"}
-        >
-          React Interview
-        </button>
-        <button
           onClick={() => setActiveTab("tanstack")}
           className={activeTab === "tanstack" ? "active-tab" : "dective-tab"}
         >
           TanStack
+        </button>
+        <button
+          onClick={() => setActiveTab("redux")}
+          className={activeTab === "redux" ? "active-tab" : "dective-tab"}
+        >
+          Redux
+        </button>
+        <button
+          onClick={() => setActiveTab("react-int")}
+          className={activeTab === "react-int" ? "active-tab" : "dective-tab"}
+        >
+          React Interview
         </button>
         <button
           onClick={() => setActiveTab("front-int")}
@@ -34,13 +42,20 @@ export const AppLayout = () => {
         >
           Frontend Interview
         </button>
+        <button
+          onClick={() => setActiveTab("python")}
+          className={activeTab === "python" ? "active-tab" : "dective-tab"}
+        >
+          Python
+        </button>
       </div>
 
       {activeTab === "react" && <ReactNotes />}
-      {activeTab === "react-int" && <ReactInterview />}
       {activeTab === "tanstack" && <TanStackNotes />}
+      {activeTab === "redux" && <ReduxNotes />}
+      {activeTab === "react-int" && <ReactInterview />}
       {activeTab === "front-int" && <FrontendInterview />}
-
+      {activeTab === "python" && <PythonNotesData />}
     </div>
   );
 };

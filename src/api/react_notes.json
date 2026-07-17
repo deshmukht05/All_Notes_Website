@@ -981,7 +981,8 @@
         "text": "When the user interacts with the form input, React state is updated through event handlers, and the input value reflects the current state value."
       },
       {
-        "type": "Pros:"
+        "type": "Pros:",
+        "text": ""
       },
       {
         "type": "•",
@@ -996,7 +997,8 @@
         "text": "Enables clear data flow and centralized state management within React components."
       },
       {
-        "type": "Cons:"
+        "type": "Cons:",
+        "text": ""
       },
       {
         "type": "•",
@@ -1013,10 +1015,12 @@
     "id": 33,
     "content": [
       {
+        "type": "",
         "text": "Uncontrolled components in React are those where form data is handled by the DOM itself."
       },
       {
-        "type": "This means:"
+        "type": "This means:",
+        "text": ""
       },
       {
         "type": "• Direct DOM Manipulation:",
@@ -1037,27 +1041,34 @@
     "id": 34,
     "content": [
       {
+        "type": "",
         "text": "The useEffect Hook in React is use to handle side effects of functional components."
       },
       {
-        "type": "Syntax:"
+        "type": "Syntax:",
+        "text": ""
       },
       {
+        "type": "",
         "text": "useEffect(() => {"
       },
       {
+        "type": "",
         "text": "//Your side effect code here"
       },
-      {
+      {"type": "",
         "text": "return () => {"
       },
       {
+        "type": "",
         "text": "//Cleanup code here (Optional)"
       },
       {
+        "type": "",
         "text": "};"
       },
       {
+        "type": "",
         "text": "}, [Array Dependencies]);"
       },
       {
@@ -1073,33 +1084,43 @@
         "text": "useEffect can return a cleanup function to clean up after the effect, such as unsubscribing from an event or clearing a timer."
       },
       {
+        "type": "",
         "text": "A side effect is any operation that affects something outside the scope of function (Pure Function). In React, side effects are managed using hooks like useEffect to ensure they are handled in a controlled and predictable manner."
       },
       {
-        "type": "Example:"
+        "type": "Example:",
+        "text": ""
       },
       {
+        "type": "",
         "text": "let count = 0;"
       },
       {
+        "type": "",
         "text": "function increment() {"
       },
       {
+        "type": "",
         "text": "count +=1;  //Modifies an external variable"
       },
       {
+        "type": "",
         "text": "}"
       },
       {
+        "type": "",
         "text": "increment();"
       },
-      {
+      {"type": "",
+
         "text": "console.log(count); //Output: 1"
       },
       {
-        "type": "Fetching Data as side effect:"
+        "type": "Fetching Data as side effect:",
+        "text": ""
       },
       {
+        "type": "",
         "text": "When you fetch data from in a React component, you are performing side effect because:"
       },
       {
@@ -1111,7 +1132,8 @@
         "text": "The fetched data will usually update the component's state, causing re-render."
       },
       {
-        "type": "Example:"
+        "type": "Example:",
+        "text": ""
       },
       {
         "type": "•",

@@ -1,0 +1,275 @@
+[
+  {
+    "id": 1,
+    "question": "Why Redux?",
+    "answer": [
+      {
+        "text": "• In small app, you can manage React's state. But as the app grows, its tricky to pass the data between components."
+      },
+      {
+        "text": "• Redux solved this problem by creating a 'centralized store' that holds all the data. This store can be accessed and updated by any part of the app."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "What is Redux?",
+    "answer": [
+      {
+        "text": "Redux is a tool that helps manage data (also known as 'Store') in large React apps. Its allows us to keeps all our app data in single place, known as Redux store, making it easy to share and update data different parts of the apps."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "How Redux Works?",
+    "answer": [
+      {
+        "text": "1. Store: This is where Redux keeps all your data."
+      },
+      {
+        "text": "2. Action: This is an object, which tell the redux what to do (like adding a task)."
+      },
+      {
+        "text": "3. Reducers: How to do. It actually change the data in the store based on the actions."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Redux: Reducer Function?",
+    "answer": [
+      {
+        "text": "A reducer is a function that decides how the state change based on an action. Reducer takes current state and action, and returns a new state."
+      },
+      {
+        "text": "A key thing to remember:"
+      },
+      {
+        "text": "1. Reducer must always returns a new state."
+      },
+      {
+        "text": "2. They should never modify the old state directly. That's why we use spread operator to duplicate the data."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Redux: Syntax?",
+    "answer": [
+      {
+        "text": "function reducer ( state = initialState, action) {}"
+      },
+      {
+        "text": "The reducer takes 2 arguments:"
+      },
+      {
+        "text": "1. state: This is the current state."
+      },
+      {
+        "text": "2. action: This tells the reducer what to do. It has a type and sometimes payload(contains data)."
+      },
+      {
+        "text": "Example:"
+      },
+      {
+        "text": "function reducer( state = initialState, action) {"
+      },
+      {
+        "text": "switch(action.type) {"
+      },
+      {
+        "text": "case 'ACTION_TYPE':"
+      },
+      {
+        "text": "return {...state, data: action.payload};"
+      },
+      {
+        "text": "default:"
+      },
+      {
+        "text": "return state;"
+      },
+      {
+        "text": "}"
+      },
+      {
+        "text": "}"
+      },
+      {
+        "text": "We use a switch case to check the action's type. Based on the action type, reducer updates the state."
+      },
+      {
+        "text": "Example:"
+      },
+      {
+        "text": "const ACTION_TYPE = 'task/add';"
+      },
+      {
+        "text": "function reducer ( state = initialState, action) {"
+      },
+      {
+        "text": "switch (action.type){"
+      },
+      {
+        "text": "case 'ACTION_TYPE':"
+      },
+      {
+        "text": "return { ...state, data: action.payload}"
+      },
+      {
+        "text": "}"
+      },
+      {
+        "text": "}"
+      },
+      {
+        "text": "Action Types: Use combination of the state domain (like task) and the event (like add), separated by '/'. For example, 'task/add'."
+      },
+      {
+        "text": "Immutable State: Never directly changes the state. Always return a new state object using ...state to copy the old state."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What is Redux Store?",
+    "answer": [
+        {
+            "text": "The store is where redux keeps all your data."
+        },
+        {
+            "text": "It is like a database of your app. Its only manages the data in memory (not saving it permanently)."
+        },
+        {
+            "text": "Syntax:"
+        },
+        {
+            "text": "import {createStore} from 'redux';"
+        },
+        {
+            "text": "const store = createStore(reducer);"
+        },
+        {
+            "text": "The createStore method creates a Redux store using the reducer function that how the state changes in response to action."
+        }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Dispatch an Action?",
+    "answer": [
+        {
+            "text": "dispatch() is used to send actions to Redux store. An action describes what changes you want to make to the state (like adding a task)."
+        },
+        {
+            "text": "Syntax:"
+        },
+        {
+            "text": "store.dispatch({ type: 'ACTION_TYPE', payload: data })"
+        }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What is getState() method?",
+    "answer": [
+        {
+            "text": "getState() retrieves the current state of the Redux store."
+        },
+        {
+            "text": "This is useful for accessing the state after it has been updated or to monitor changes."
+        }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What is Redux Action?",
+    "answer": [
+        {
+            "text": "An action is an object that tells Redux what we want to do. It must have a type property that describes the action."
+        },
+        {
+            "text": "Syntax:"
+        },
+        {
+            "text": "{ type: 'ACTION_TYPE', payload: someData }"
+        }
+    ]
+  },
+  {
+    "id":10,
+    "question": "What is Action Creator?",
+    "answer": [
+        {
+            "text": "Action Creator is a function that creates an action object. This makes it easier to create actions with different data."
+        },
+        {
+            "text": "Syntax:"
+        },
+        {
+            "text": "function actionCreator( data ) {"
+        },
+        {
+            "text": "return ({ type: 'ACTION_TYPE', payload: data })"
+        },
+        {
+            "text": "}"
+        }
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Access Redux state in React using useSelector().",
+    "answer": [
+        {
+            "text": "Use the useSelector() hook to read the data from Redux store."
+        },
+        {
+            "text": "const count = useSelector( state => state.property )"
+        },
+        {
+            "text": "Selector Function: We define a selector function that takes the entire Redux store state as an argument and returns a specific piece of data we need."
+        }
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Dispatch actions in React using useDispatch().",
+    "answer": [
+        {
+            "text": "Use the useDispatch() hook to disptch actions from a React components."
+        }
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Redux toolkit installation.",
+    "answer": [
+        {
+            "text": "The Redux Toolkit package is intended to be the standard way to write Redux logic."
+        },
+        {
+            "text": "Installation:"
+        },
+        {
+            "text": "1. npm install @reduxjs/toolkit"
+        },
+        {
+            "text": "2. import { composeWithDevTools } from '@redux-devtools/extension';"
+        }
+    ]
+  },
+  {
+    "id": 14,
+    "question": "What is Redux Thunk?",
+    "answer": [
+        {
+            "text": "• Redux Thunk is middleware that allows you to write action creators that returns a function instead of action. This function can perform asynchromnous logic (like API requests) and dispatch actions after the operation is complete (e.g. fetching task and then dispatching them to the store)."
+        },
+        {
+            "text": "• When you return a function from action creator, Redux Thunk provides the dispatch function as an argument. This allows you to manually dispatch other actions (e.g. when an API call succeeds  or fails)."
+        }
+    ]
+  }
+]

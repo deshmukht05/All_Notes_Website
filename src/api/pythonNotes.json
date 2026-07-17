@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "Data Types, Variables, Comments",
+    "tags": ["Python Basics", "Syntax", "Core Concept"],
+    "driveFileId": "14vxalqZ0ApoMCydYjyzzlk2ZANNuUEAq"
+  },
+  {
+    "id": "2",
+    "title": "Typecasting (int, float, str, bool)",
+    "tags": ["Python Basics", "Data Types", "Core Concept"],
+    "driveFileId": "1sGLsbQO-FI2i8uH0zGp-rWzBo1P90jpo"
+  },
+  {
+    "id": "3",
+    "title": "Operators",
+    "tags": ["Python Basics", "Logic", "Core Concept"],
+    "driveFileId": "1kYGkm6qNbIalgGWLniETlt696s1DfGGl"
+  },
+  {
+    "id": "4",
+    "title": "Conditional Statements",
+    "tags": ["Control Flow", "Logic", "Intermediate"],
+    "driveFileId": "18F_0vsszbsdEpLI4F1zRrQX2eeSh9ASH"
+  },
+  {
+    "id": "5",
+    "title": "Nested Loops and Loop Control",
+    "tags": ["Control Flow", "Loops", "Intermediate"],
+    "driveFileId": "11cgx3x3QxYuaaTnIHCGVx5JD1L_RvI_U"
+  },
+  {
+    "id": "6",
+    "title": "Lists",
+    "tags": ["Data Structures", "Collections", "Core Concept"],
+    "driveFileId": "1zZe5nySaa7CJBo-UG-qQjqmFwMcK3S8N"
+  },
+  {
+    "id": "7",
+    "title": "Tuples",
+    "tags": ["Data Structures", "Collections", "Core Concept"],
+    "driveFileId": "1Qtjkuf0ECDOfgTJPv9gB9FEmxQ8LzCgs"
+  },
+  {
+    "id": "8",
+    "title": "Sets",
+    "tags": ["Data Structures", "Collections", "Core Concept"],
+    "driveFileId": "1Yy6yZ5OXaL1SubPukXqdubIpm7jHg2ib"
+  },
+  {
+    "id": "9",
+    "title": "Dictionaries",
+    "tags": ["Data Structures", "Collections", "Core Concept"],
+    "driveFileId": "1cHptd-_GVXaPtCB_j09qYpycGSD-sxSK"
+  },
+  {
+    "id": "10",
+    "title": "Nested Data Structures & Operations",
+    "tags": ["Data Structures", "Advanced Data", "Intermediate"],
+    "driveFileId": "1JH2yqzx0d6kNqQJElJ_OfAnqcHkxtJeZ"
+  },
+  {
+    "id": "11",
+    "title": "Functions: Parameters & Return",
+    "tags": ["Functions", "Modular Code", "Core Concept"],
+    "driveFileId": "1szKVo5apkQLRqfOjwFcDe7Oo5xwIykjt"
+  },
+  {
+    "id": "12",
+    "title": "Lambda Function and Recursion",
+    "tags": ["Functions", "Functional Programming", "Advanced"],
+    "driveFileId": "1fy3KSvshzjAg--LiZd-_jAcH4gBN16TS"
+  },
+  {
+    "id": "13",
+    "title": "Modules and Packages",
+    "tags": ["Architecture", "Modular Code", "Intermediate"],
+    "driveFileId": "19Oh4zY-KjipkfKf3JL63mHhMXsJrzZTz"
+  },
+  {
+    "id": "14",
+    "title": "OOP-Classes and Objects",
+    "tags": ["OOP", "Object-Oriented", "Core Concept"],
+    "driveFileId": "15Ga7jex-NuhTUGxXr29TFuk25DmYjGeh"
+  },
+  {
+    "id": "15",
+    "title": "Builtin Functions",
+    "tags": ["Python Basics", "Builtins", "Core Concept"],
+    "driveFileId": "1dcJI31oo16ZCFLjtfIA2u2MYCXcYCRrf"
+  },
+  {
+    "id": "16",
+    "title": "Encapsulation and Abstraction",
+    "tags": ["OOP", "Object-Oriented", "Advanced"],
+    "driveFileId": "1IG087my1velHJlyIxkcoKiicTBDnbYkV"
+  },
+  {
+    "id": "17",
+    "title": "Inheritance and Polymorphism",
+    "tags": ["OOP", "Object-Oriented", "Advanced"],
+    "driveFileId": "1U0FxovPo14cn9FHCCz01EwC4VEurhBuj"
+  },
+  {
+    "id": "18",
+    "title": "Dunder Methods",
+    "tags": ["OOP", "Advanced", "Special Methods"],
+    "driveFileId": "1ezmQ1CZ3jhqvyF5bpWXAp5JnNsbapS42"
+  }
+]
