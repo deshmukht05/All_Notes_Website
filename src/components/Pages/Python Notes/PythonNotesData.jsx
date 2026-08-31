@@ -12,26 +12,27 @@ export const PythonNotesData = () => {
       <ul>
         <div className="section-accordion">
           {notes.map((curEle) => {
-            const { title, driveFileId, id } = curEle;
+            const { title, tags, driveFileId, id } = curEle;
             return (
               <li key={id}>
-                  <div className="topic-grid">
-                    <p className="accordion-question">{title}</p>
-                  </div>
-                  <div className="iframeWrapper">
-                    {isLoading && (
-                      <p className="loading-text">
-                        Fetching document from Google Drive...
-                      </p>
-                    )}
-                    <iframe
-                      src={`${DRIVE_BASE_URL}/${driveFileId}/preview`}
-                      allow="autoplay"
-                      title={title}
-                      loading="lazy"
-                      onLoad={() => setIsLoading(false)}
-                     />
-                  </div>
+                <div className="topic-grid">
+                  <p className="accordion-question">{title}</p>
+                  <p className="accordian-tags">{tags}</p>
+                </div>
+                <div className="iframeWrapper">
+                  {isLoading && (
+                    <p className="loading-text">
+                      Fetching document from Google Drive...
+                    </p>
+                  )}
+                  <iframe
+                    src={`${DRIVE_BASE_URL}/${driveFileId}/preview`}
+                    allow="autoplay"
+                    title={title}
+                    loading="lazy"
+                    onLoad={() => setIsLoading(false)}
+                  />
+                </div>
               </li>
             );
           })}
