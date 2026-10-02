@@ -34,6 +34,7 @@
     "id": 2,
     "content": [
       {
+        "type": " ",
         "text": "React is declarative because it describes what the UI should look like rather than how to achieve it. This makes the code easier to read and maintain, as it is more focused on end results rather than the steps involved in getting it."
       }
     ]
@@ -71,12 +72,15 @@
     "id": 5,
     "content": [
       {
+        "type": " ",
         "text": "In React, component is a function which returns your JSX code."
       },
       {
+        "type": " ",
         "text": "In React, a component is essentially a JavaScript function or class that returns JSX (JavaScript XML), a syntax extension that allows you to write HTML-like code inside JavaScript. Components are the building blocks of any React application, allowing for the creation of complex and interactive user interfaces through the assembly of isolated, reusable pieces."
       },
       {
+        "type": " ",
         "text": "You can also use .js extension with React.js components but it's recommended to use .jsx to differentiate between regular JavaScript Files and React.js components. There are two ways to create components in React.js:"
       },
       {
@@ -138,21 +142,27 @@
     "id": 8,
     "content": [
       {
+        "type": " ",
         "text": "You can add any variables of your component in JSX using {} syntax."
       },
       {
-        "type": "Example:"
+        "type": "Example:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "function MyComponent(){"
       },
       {
+        "type": " ",
         "text": "const value;"
       },
       {
+        "type": " ",
         "text": "return <p>{value}</p>;"
       },
       {
+        "type": " ",
         "text": "}"
       }
     ]
@@ -184,7 +194,8 @@
     "id": 10,
     "content": [
       {
-        "type": "1. Default import and export"
+        "type": "1. Default import and export",
+        "text": " "
       },
       {
         "type": "• Default Export:",
@@ -199,7 +210,8 @@
         "text": "import NetflixSeries from './components/NetflixSeries';"
       },
       {
-        "type": "2. Named import and export"
+        "type": "2. Named import and export",
+        "text": " "
       },
       {
         "type": "• Named Export:",
@@ -214,7 +226,8 @@
         "text": "import { Footer, Header } from './components/NetflixSeries';"
       },
       {
-        "type": "3. Mixed import and export"
+        "type": "3. Mixed import and export",
+        "text": " "
       },
       {
         "type": "• Mixed Export:",
@@ -235,6 +248,7 @@
     "id": 11,
     "content": [
       {
+        "type": " ",
         "text": "We don't have for loops in JSX, so we have to use .map() method of arrays."
       }
     ]
@@ -332,39 +346,51 @@
     "id": 16,
     "content": [
       {
+        "type": " ",
         "text": "import styled from 'styled-components';"
       },
       {
-        "type": "Method 1:"
+        "type": "Method 1:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "const Button = styled.button`"
       },
       {
+        "type": " ",
         "text": "color: grey; "
       },
       {
+        "type": " ",
         "text": "background-color: white;"
       },
       {
+        "type": " ",
         "text": "`;"
       },
       {
-        "type": "Method 2:"
+        "type": "Method 2:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "const Button = styled.button({"
       },
       {
+        "type": " ",
         "text": "color: grey; "
       },
       {
+        "type": " ",
         "text": "background-color: white;"
       },
       {
+        "type": " ",
         "text": "});"
       },
       {
+        "type": " ",
         "text": "Here 'button' is tag name like 'a, li, p' tags."
       }
     ]
@@ -374,6 +400,7 @@
     "id": 17,
     "content": [
       {
+        "type": " ",
         "text": "Event handling in React.js is the process of capturing and responding to user interactions, such as clicks, keystrokes, or form submissions, within a React application. Event handling in React follows a similar pattern to standard JavaScript event handling but with some key differences, such as using synthetic events for cross-browser compatibility and providing consistent event handling across different elements and browsers."
       },
       {
@@ -408,13 +435,15 @@
         "text": "<button onClick={() => alert('Hey I am Here!')}>Inline Arr Function</button>"
       },
       {
-        "type": "• Passing Arguments to Event Handlers:"
+        "type": "• Passing Arguments to Event Handlers:",
+        "text": " "
       },
       {
         "type": "Example:",
         "text": "<button onClick={() => handleWelcomeButton('Tushar')}>Welcome 1</button>,"
       },
       {
+        "type": " ",
         "text": "<button onClick={() => handleWelcomeButton('Gauri')}>Welcome 2</button>"
       }
     ]
@@ -424,6 +453,7 @@
     "id": 18,
     "content": [
       {
+        "type": " ",
         "text": "When you handle events in React, like clicking a button or typing in an input box, React wrap native browser events in something called SyntheticEvent."
       }
     ]
@@ -437,6 +467,7 @@
         "text": "<button onClick={() => handleWelcomeButton('Tushar')}>Welcome 1</button>"
       },
       {
+        "type": " ",
         "text": "Here when we are passing 'Tushar' to a function that is our argument."
       },
       {
@@ -444,12 +475,15 @@
         "text": "const handleWelcomeButton = (user) => {"
       },
       {
+        "type": " ",
         "text": "console.log(`Welcome ${user}.`);"
       },
       {
+        "type": " ",
         "text": "};"
       },
       {
+        "type": " ",
         "text": "Here 'user' is our parameter which will fetch the argument."
       }
     ]
@@ -459,6 +493,7 @@
     "id": 20,
     "content": [
       {
+        "type": " ",
         "text": "Passing event handlers as props in React.js is a common pattern used to allow child components to communicate with parent components. This pattern is useful in various scenarios, including:"
       },
       {
@@ -466,6 +501,7 @@
         "text": "Form Handling:"
       },
       {
+        "type": " ",
         "text": "Passing event handlers like onChange or onSubmit to form components allows the child components to update the form data and notify the parent component of changes."
       },
       {
@@ -473,6 +509,7 @@
         "text": "User Interaction:"
       },
       {
+        "type": " ",
         "text": "Event handlers like onClick can be passed to interactive elements (e.g., buttons, links) to trigger specific actions in the parent component, such as opening a modal or navigating to a different page."
       },
       {
@@ -480,6 +517,7 @@
         "text": "State Management:"
       },
       {
+        "type": " ",
         "text": "Event handlers can be used to update state in the parent component, which can then be passed down to child components as props to reflect the updated statement."
       },
       {
@@ -487,6 +525,7 @@
         "text": "Callback Functions:"
       },
       {
+        "type": " ",
         "text": "Event handlers can be used as callback functions to handle asynchronous operations or to update state based on the result of an operation."
       }
     ]
@@ -576,37 +615,45 @@
         "text": "function App() {"
       },
       {
+        "type": " ",
         "text": "return ("
       },
       {
+        "type": " ",
         "text": "<div>"
       },
       {
+        "type": " ",
         "text": "<ParentComponent>"
       },
       {
+        "type": " ",
         "text": "<ChildComponent>"
       },
       {
+        "type": " ",
         "text": "<AnotherChildComponent>"
       },
       {
+        "type": " ",
         "text": "</ParentComponent>"
       },
       {
+        "type": " ",
         "text": "<SiblingComponent />"
       },
       {
+        "type": " ",
         "text": "</div>"
       },
       {
+        "type": " ",
         "text": ");"
       },
+      { "type": " ", "text": "}" },
       {
-        "text": "}"
-      },
-      {
-        "type": "• Here's how the rendering works:"
+        "type": "• Here's how the rendering works:",
+        "text": " "
       },
       {
         "type": "1. Initial Render: ",
@@ -631,6 +678,7 @@
         "text": "const[count, setCount] = useState(0);"
       },
       {
+        "type": " ",
         "text": "count is initialized as 0."
       },
       {
@@ -638,6 +686,7 @@
         "text": "Increment function is called."
       },
       {
+        "type": " ",
         "text": "setCount(count + 1) updated count to 1."
       },
       {
@@ -645,10 +694,12 @@
         "text": "React re-renders the component. When user click the button for the 2nd time"
       },
       {
+        "type": " ",
         "text": "const[count, setCount] = useState(0); sees that count is now 1 and uses 1 as the current state."
       },
       {
-        "type": "'The useState hook is smart enough to only use the initial value the very first time the component renders.'"
+        "type": "'The useState hook is smart enough to only use the initial value the very first time the component renders.'",
+        "text": " "
       }
     ]
   },
@@ -657,19 +708,24 @@
     "id": 25,
     "content": [
       {
+        "type": " ",
         "text": "Derived state is any state that can be computed based on other state or props. It is not stored directly in the componentis state but is calculated when needed. This approach helps avoid duplication and keeps the state simpler and more manageable."
       },
       {
-        "type": "Example:"
+        "type": "Example:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "const userCount = users.length;"
       },
       {
+        "type": " ",
         "text": "const averageAge = (user.reduce((accum, currElem) => accum + currElem.age, 0)/userCount);"
       },
       {
-        "type": "Benefits if derived state:"
+        "type": "Benefits if derived state:",
+        "text": " "
       },
       {
         "type": "• Avoid Redundancy:",
@@ -694,13 +750,16 @@
         "text": "is a pattern in React where you move the state from child components to a common parent component so that multiple child components can share and synchronize this state. This ensures that the state is managed at a higher level in the component hierarchy, allowing data to flow down as props and actions (such as events) to flow up."
       },
       {
-        "type": "Use Case:"
+        "type": "Use Case:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "When you have two or more components that need to share the same state, you should lift the state up to their nearest common ancestor. This allows these components to stay in sync and ensures that the state is managed in a single place."
       },
       {
-        "type": "Updating parent state from child and vice-versa:"
+        "type": "Updating parent state from child and vice-versa:",
+        "text": " "
       },
       {
         "type": "•",
@@ -729,7 +788,8 @@
         "text": "Keys tell React which array item each component corresponds to, so that it can match them up later. This becomes important if your array items can move (e.g. due to sorting), get inserted, or get deleted."
       },
       {
-        "type": "Rules:"
+        "type": "Rules:",
+        "text": " "
       },
       {
         "type": "1. ",
@@ -746,16 +806,20 @@
     "id": 28,
     "content": [
       {
+        "type": " ",
         "text": " Short circuit evaluation is a technique used in JavaScript (and many other programming languages) where expressions are evaluated from left to right. In logical operations, evaluation stops as soon as the result is determined. This is often used in React to conditionally render components or execute code based on the truthiness of certain conditions."
       },
       {
-        "type": "Rules of Short Circuit Evaluation:"
+        "type": "Rules of Short Circuit Evaluation:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "Short circuit evaluation involves logical operators (&&, ||, ??) and how they evaluate expressions based on the truthiness of their operands."
       },
       {
-        "type": "• Logical OR (||):"
+        "type": "• Logical OR (||):",
+        "text": " "
       },
       {
         "type": "Syntax:",
@@ -770,10 +834,12 @@
         "text": "const result = false || 'Hello'; //'Hello'"
       },
       {
+        "type": " ",
         "text": "const result = true || 'World'; //true"
       },
       {
-        "type": "• Logical AND (&&):"
+        "type": "• Logical AND (&&):",
+        "text": " "
       },
       {
         "type": "Syntax:",
@@ -788,10 +854,12 @@
         "text": "const result = true && 'Hello'; //'Hello'"
       },
       {
+        "type": " ",
         "text": "const result = false && 'World'; //false"
       },
       {
-        "type": "• Nullish Coalescing (??):"
+        "type": "• Nullish Coalescing (??):",
+        "text": " "
       },
       {
         "type": "Syntax:",
@@ -806,9 +874,11 @@
         "text": "const result = null ?? 'Hello'; //'Hello'"
       },
       {
+        "type": " ",
         "text": "const result = undefined ?? 'World'; //'World'"
       },
       {
+        "type": " ",
         "text": "const result = '' ?? 'Fallback'; //''"
       }
     ]
@@ -818,6 +888,7 @@
     "id": 29,
     "content": [
       {
+        "type": " ",
         "text": "useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useLayoutEffect, useDebugValue, useImperativeHandle"
       }
     ]
@@ -869,7 +940,8 @@
         "text": "const [count, setCount] = useState(0);"
       },
       {
-        "type": "Rules:"
+        "type": "Rules:",
+        "text": " "
       },
       {
         "type": "•",
@@ -894,10 +966,12 @@
     "id": 32,
     "content": [
       {
+        "type": " ",
         "text": "Controlled components in React are those where form data is handled by React component state."
       },
       {
-        "type": "This means:"
+        "type": "This means:",
+        "text": " "
       },
       {
         "type": "• State Management:",
@@ -912,7 +986,8 @@
         "text": "When the user interacts with the form input, React state is updated through event handlers, and the input value reflects the current state value."
       },
       {
-        "type": "Pros:"
+        "type": "Pros:",
+        "text": " "
       },
       {
         "type": "•",
@@ -927,7 +1002,8 @@
         "text": "Enables clear data flow and centralized state management within React components."
       },
       {
-        "type": "Cons:"
+        "type": "Cons:",
+        "text": " "
       },
       {
         "type": "•",
@@ -944,10 +1020,12 @@
     "id": 33,
     "content": [
       {
+        "type": " ",
         "text": "Uncontrolled components in React are those where form data is handled by the DOM itself."
       },
       {
-        "type": "This means:"
+        "type": "This means:",
+        "text": " "
       },
       {
         "type": "• Direct DOM Manipulation:",
@@ -968,27 +1046,32 @@
     "id": 34,
     "content": [
       {
+        "type": " ",
         "text": "The useEffect Hook in React is use to handle side effects of functional components."
       },
       {
-        "type": "Syntax:"
+        "type": "Syntax:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "useEffect(() => {"
       },
+      { "type": " ", "text": "//Your side effect code here" },
       {
-        "text": "//Your side effect code here"
-      },
-      {
+        "type": " ",
         "text": "return () => {"
       },
       {
+        "type": " ",
         "text": "//Cleanup code here (Optional)"
       },
       {
+        "type": " ",
         "text": "};"
       },
       {
+        "type": " ",
         "text": "}, [Array Dependencies]);"
       },
       {
@@ -1004,33 +1087,43 @@
         "text": "useEffect can return a cleanup function to clean up after the effect, such as unsubscribing from an event or clearing a timer."
       },
       {
+        "type": " ",
         "text": "A side effect is any operation that affects something outside the scope of function (Pure Function). In React, side effects are managed using hooks like useEffect to ensure they are handled in a controlled and predictable manner."
       },
       {
-        "type": "Example:"
+        "type": "Example:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "let count = 0;"
       },
       {
+        "type": " ",
         "text": "function increment() {"
       },
       {
+        "type": " ",
         "text": "count +=1;  //Modifies an external variable"
       },
       {
+        "type": " ",
         "text": "}"
       },
       {
+        "type": " ",
         "text": "increment();"
       },
       {
+        "type": " ",
         "text": "console.log(count); //Output: 1"
       },
       {
-        "type": "Fetching Data as side effect:"
+        "type": "Fetching Data as side effect:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "When you fetch data from in a React component, you are performing side effect because:"
       },
       {
@@ -1042,7 +1135,8 @@
         "text": "The fetched data will usually update the component's state, causing re-render."
       },
       {
-        "type": "Example:"
+        "type": "Example:",
+        "text": " "
       },
       {
         "type": "•",
@@ -1075,7 +1169,8 @@
         "text": "You can access value of it's using yourRef.current;"
       },
       {
-        "type": "Uncontrolled Components:"
+        "type": "Uncontrolled Components:",
+        "text": " "
       },
       {
         "type": "•",
@@ -1088,6 +1183,7 @@
     "id": 36,
     "content": [
       {
+        "type": " ",
         "text": "useId is React Hook for generating unique ID's that can be passed to accessibility attributes. It helps to ensure that each instance of a component gets a unique ID, which is useful for associating labels with input fields and other elements."
       },
       {
@@ -1121,7 +1217,8 @@
         "text": "As your component tree deepens, prop drilling can make the code more complex and harder to maintain."
       },
       {
-        "type": "Concluding Prop Drilling:"
+        "type": "Concluding Prop Drilling:",
+        "text": " "
       },
       {
         "type": "•",
@@ -1142,6 +1239,7 @@
     "id": 38,
     "content": [
       {
+        "type": " ",
         "text": "A way to pass the data through component tree without having to pass props down manually at entry level."
       },
       {
@@ -1163,6 +1261,7 @@
     "id": 39,
     "content": [
       {
+        "type": " ",
         "text": "Creating custom hooks in React is a powerful way to encapsulate logic and make your components cleaner and more maintainable."
       },
       {
@@ -1226,7 +1325,8 @@
         "text": "Do memoizations when necessary."
       },
       {
-        "type": "OR"
+        "type": "OR",
+        "text": " "
       },
       {
         "type": "•",
@@ -1239,15 +1339,19 @@
     "id": 42,
     "content": [
       {
-        "type": "Syntax:"
+        "type": "Syntax:",
+        "text": " "
       },
       {
+        "type": " ",
         "text": "const memoizedValue = useMemo(() => {"
       },
       {
+        "type": " ",
         "text": "return computedValue;"
       },
       {
+        "type": " ",
         "text": "}, [dependencies]);"
       },
       {

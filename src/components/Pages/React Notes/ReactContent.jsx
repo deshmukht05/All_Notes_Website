@@ -6,7 +6,7 @@ export const ReactContent = ({ curData, isActive }) => {
       {content.map((curEle, id) => {
         const { type, text } = curEle;
         return (
-          <li key={id}>
+          <li key={id} className="leading-5 sm:leading-6">
             <p>{isActive && `${type} ${text}`}</p>
           </li>
         );

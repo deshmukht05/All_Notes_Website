@@ -11,59 +11,62 @@ export const AppLayout = () => {
   const [activeTab, setActiveTab] = useState("react");
 
   return (
-    <div className="layout-section">
-      <div className="layout-display">
-        <button
-          onClick={() => setActiveTab("react")}
-          className={activeTab === "react" ? "active-tab" : "dective-tab"}
-        >
-          React
-        </button>
-        <button
-          onClick={() => setActiveTab("tanstack")}
-          className={activeTab === "tanstack" ? "active-tab" : "dective-tab"}
-        >
-          TanStack
-        </button>
-        <button
-          onClick={() => setActiveTab("redux")}
-          className={activeTab === "redux" ? "active-tab" : "dective-tab"}
-        >
-          Redux
-        </button>
-        <button
-          onClick={() => setActiveTab("react-int")}
-          className={activeTab === "react-int" ? "active-tab" : "dective-tab"}
-        >
-          React Interview
-        </button>
-        <button
-          onClick={() => setActiveTab("front-int")}
-          className={activeTab === "front-int" ? "active-tab" : "dective-tab"}
-        >
-          Frontend Interview
-        </button>
-        <button
-          onClick={() => setActiveTab("python")}
-          className={activeTab === "python" ? "active-tab" : "dective-tab"}
-        >
-          Python
-        </button>
-        <button
-          onClick={() => setActiveTab("mysql")}
-          className={activeTab === "mysql" ? "active-tab" : "dective-tab"}
-        >
-          MySQL
-        </button>
-      </div>
+    <>
+      <h1 className="course-heading">Course Notes</h1>
+      <div className="layout-section">
+        <div className="layout-display">
+          <button
+            onClick={() => setActiveTab("react")}
+            className={activeTab === "react" ? "active-tab" : "inactive-tab"}
+          >
+            React
+          </button>
+          <button
+            onClick={() => setActiveTab("tanstack")}
+            className={activeTab === "tanstack" ? "active-tab" : "inactive-tab"}
+          >
+            TanStack
+          </button>
+          <button
+            onClick={() => setActiveTab("redux")}
+            className={activeTab === "redux" ? "active-tab" : "inactive-tab"}
+          >
+            Redux
+          </button>
+          <button
+            onClick={() => setActiveTab("react-int")}
+            className={activeTab === "react-int" ? "active-tab" : "inactive-tab"}
+          >
+            React Interview
+          </button>
+          <button
+            onClick={() => setActiveTab("front-int")}
+            className={activeTab === "front-int" ? "active-tab" : "inactive-tab"}
+          >
+            Frontend Interview
+          </button>
+          <button
+            onClick={() => setActiveTab("python")}
+            className={activeTab === "python" ? "active-tab" : "inactive-tab"}
+          >
+            Python
+          </button>
+          <button
+            onClick={() => setActiveTab("mysql")}
+            className={activeTab === "mysql" ? "active-tab" : "inactive-tab"}
+          >
+            MySQL
+          </button>
+        </div>
 
-      {activeTab === "react" && <ReactNotes />}
-      {activeTab === "tanstack" && <TanStackNotes />}
-      {activeTab === "redux" && <ReduxNotes />}
-      {activeTab === "react-int" && <ReactInterview />}
-      {activeTab === "front-int" && <FrontendInterview />}
-      {activeTab === "python" && <PythonNotesData />}
-      {activeTab === "mysql" && <SQLNotes />}
-    </div>
+        {activeTab === "react" && <ReactNotes />}
+        {activeTab === "tanstack" && <TanStackNotes />}
+        {activeTab === "redux" && <ReduxNotes />}
+        {activeTab === "react-int" && <ReactInterview />}
+        {activeTab === "front-int" && <FrontendInterview />}
+        {activeTab === "python" && <PythonNotesData />}
+        {activeTab === "mysql" && <SQLNotes />}
+      </div>
+    </>
   );
 };

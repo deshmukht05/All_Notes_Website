@@ -1,12 +1,22 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 /* Base */
 .layout-section {
-  @apply py-10;
+  @apply pt-5 sm:pt-10 pb-10;
+}
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-plus: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  @apply font-plus;
 }
 
 .layout-display {
-  @apply grid grid-cols-2 gap-2 mx-5 sm:flex sm:flex-row sm:gap-5 m-auto items-center justify-center mb-8 sm:mb-12;
+  @apply gap-2 sm:mx-5 flex flex-wrap sm:flex-row sm:gap-5 m-auto items-center justify-center mb-8 sm:mb-12;
 }
 
 .section-accordion {
@@ -14,7 +24,11 @@
 }
 
 h1 {
-  @apply text-white text-center text-xl sm:text-3xl font-bold;
+  @apply text-[#c8d6ff] text-center text-xl sm:text-2xl font-medium;
+}
+
+.course-heading {
+  @apply pt-10 text-[#d0e5ff] text-center text-2xl sm:text-4xl font-bold
 }
 
 .accordion-grid {
@@ -22,33 +36,33 @@ h1 {
 }
 
 .accordion-question {
-  @apply text-sm sm:text-lg font-medium tracking-wide text-white;
+  @apply text-[13px] sm:text-[16px] font-medium tracking-wide text-white;
 }
 
 .content-accordion {
   @apply bg-gray-900 px-3 py-2 sm:px-6 sm:pb-4 rounded-b-xl;
 }
 
-p {
-  @apply text-sm sm:text-lg;
+.content-accordion p {
+  @apply text-[13px] sm:text-[16px];
 }
 
 /* Toggle Button */
 .deactive-btn {
-  @apply py-2 px-3 text-white text-sm sm:text-lg sm:py-2 sm:px-4 bg-green-600 rounded font-medium cursor-pointer;
+  @apply py-2 px-3 text-white text-[12px] sm:text-[14px] sm:py-2 sm:px-4 bg-green-700 rounded font-semibold cursor-pointer;
 }
 
 .active-btn {
-  @apply py-2 px-3 bg-red-600 text-sm sm:text-lg sm:py-2 sm:px-4 rounded font-medium text-white cursor-pointer;
+  @apply py-2 px-3 bg-red-700 text-[12px] sm:text-[14px] sm:py-2 sm:px-4 rounded font-medium text-white cursor-pointer;
 }
 
 /* Active Tab */
 .active-tab {
-  @apply bg-gray-900 px-4 py-2 text-sm sm:text-lg text-gray-50 text-shadow-2xs rounded-4xl shadow-gray-200 shadow-xl/10 border-gray-100 border-2 cursor-pointer;
+  @apply bg-[#111d27] px-5 py-2 text-[12px] sm:text-[16px] text-gray-50 rounded-lg sm:rounded-xl text-shadow-2xs outline-gray-100 outline-2 cursor-pointer;
 }
 
-.dective-tab {
-  @apply bg-gray-900 px-4 py-2 text-sm sm:text-lg border-2 border-gray-700 text-white rounded-4xl cursor-pointer hover:border-gray-500 transition-all duration-200;
+.inactive-tab {
+  @apply bg-[#111d27] px-5 py-2 text-[12px] sm:text-[16px] outline-2 outline-gray-700 rounded-lg sm:rounded-xl text-white cursor-pointer hover:border-gray-500 transition-all duration-200;
 }
 
 /* TanStack */
