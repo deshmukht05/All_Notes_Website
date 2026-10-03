@@ -1,137 +1,747 @@
 [
   {
-    "title": "",
+    "title": "Is Node.js is a language or framework?",
     "id": 1,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": " ",
+        "text": "Node.js is not a language or a framework, but rather a JavaScript Runtime Environment that allows developers to run JavaScript outside the browser."
       }
     ]
   },
   {
-    "title": "",
+    "title": "Introduction to NodeJS.",
     "id": 2,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "1. ",
+        "text": "Open source, server-side JavaScript runtime."
+      },
+      {
+        "type": "2. ",
+        "text": "Allows you to run JavaScript on your machine or on servers."
+      },
+      {
+        "type": "3. ",
+        "text": "Built on the V8 JavaScript engine for speed."
+      },
+      {
+        "type": "4. ",
+        "text": "Robust ecosystem with npm."
+      },
+      {
+        "type": "5. ",
+        "text": "Node is all about Modules."
       }
     ]
   },
   {
-    "title": "",
+    "title": "What is Open Source?",
     "id": 3,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": " ",
+        "text": "Open-Source means that the source code of Node.js is publicly available."
+      },
+      {
+        "type": "Anyone can:",
+        "text": " "
+      },
+      {
+        "type": "▪ ",
+        "text": "View: You can see how Node.js is built under the hood."
+      },
+      {
+        "type": "▪ ",
+        "text": "Modify: If you want to customize or improve Node.js, you can do it."
+      },
+      {
+        "type": "▪ ",
+        "text": "Contribute: Developers around the world actively contribute to improve Node.js."
       }
     ]
   },
   {
-    "title": "",
+    "title": "What is Cross Platform?",
     "id": 4,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": " ",
+        "text": "Cross Platform means Node.js can run on multiple operating systems without needing major changes."
+      },
+      {
+        "type": "Supported Platforms: ",
+        "text": "Windows, MacOS, Linux"
       }
     ]
   },
   {
-    "title": "",
+    "title": "What is JavaScript Runtime Environment?",
     "id": 5,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": " ",
+        "text": "JavaScript Runtime Environment refers to the environment where your JavaScript code runs."
+      },
+      {
+        "type": "In Browsers: ",
+        "text": "JavaScript typically runs in the browser (like Chrome or Firefox) to handle frontend tasks."
+      },
+      {
+        "type": "With Node.js: ",
+        "text": "Node.js allows JavaScript to run outside the browser, on the server."
+      },
+      {
+        "type": " ",
+        "text": "It provides tools to interact with the server, like:"
+      },
+      {
+        "type": "▪ ",
+        "text": "File system (read/write files)"
+      },
+      {
+        "type": "▪ ",
+        "text": "Network (handles HTTP requests)"
+      },
+      {
+        "type": "▪ ",
+        "text": "Database (connect to database like MongoDB or MySQL)"
       }
     ]
   },
   {
-    "title": "",
+    "title": "Why Node.js Special as a Runtime?",
     "id": 6,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ V8 Engine: ",
+        "text": "Node.js uses Google Chrome V8 Engine to compile JavaScript into machine code, making it lightning fast."
+      },
+      {
+        "type": "▪ Built-int APIs: ",
+        "text": "Node.js comes with Built-in APIs (like fs for file systems or http for servers) so you can build powerful applications without extra libraries."
       }
     ]
   },
   {
-    "title": "",
+    "title": "Why do we need Node.js?",
     "id": 7,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": " ",
+        "text": "Single Language for Full Stack Development:"
+      },
+      {
+        "type": "▪ ",
+        "text": "Developers can use JavaScript for both frontend and backend, reducing complexity."
+      },
+      {
+        "type": "▪ ",
+        "text": "For example, a MERN Stack Project (like MongoDB, Express, React, Node)."
+      },
+      {
+        "type": " ",
+        "text": "High Performance:"
+      },
+      {
+        "type": "▪ ",
+        "text": "Thanks, to the V8 engine, Node.js is super fast."
+      },
+      {
+        "type": "▪ ",
+        "text": "It can handle thousands of simultaneous connection with ease."
+      },
+      {
+        "type": " ",
+        "text": "Event-Driven and Non-Blocking I/O:"
+      },
+      {
+        "type": "▪ ",
+        "text": "Unlike traditional servers that block a thread for each request, Node.js uses an asynchronous model, making it highly efficient for handling multiple tasks."
+      },
+      {
+        "type": " ",
+        "text": "Scalable for modern applications:"
+      },
+      {
+        "type": "▪ ",
+        "text": "Ideal for real-time applications like chat apps, streaming platforms or online games."
       }
     ]
   },
   {
-    "title": "",
+    "title": "Introduction to REPL (Read-Eval-Print Loop).",
     "id": 8,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "1. ",
+        "text": "It stands for Read-Eval-Print Loop or Read, Evaluate, Print and Loop. It's an interactive programming environment that allows you to execute JavaScript code one statement at a time."
+      },
+      {
+        "type": "2. ",
+        "text": "You can open your terminal and use node command."
+      },
+      {
+        "type": "3. ",
+        "text": "You can use it to taste simple JavaScript code similar to browser devtools."
+      },
+      {
+        "type": "4. ",
+        "text": "CRTL + C to exit out of it."
       }
     ]
   },
   {
-    "title": "",
+    "title": "More about REPL.",
     "id": 9,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": " ",
+        "text": "Each part of the acronym highlights a specific step in how the REPL works:"
+      },
+      {
+        "type": "1. ",
+        "text": "Read: The REPL read the user's input (a single line or multiple line of code) and parses it to a data structure that JavaScript engine can understand."
+      },
+      {
+        "type": "2. ",
+        "text": "Eval (Evaluate): The parsed input is evaluated (executed) by JavaScript engine. If the input is a valid expression, the REPL computes the result."
+      },
+      {
+        "type": "3. ",
+        "text": "Print: The result of the evaluated expression is printed on the console so the user can see the output."
+      },
+      {
+        "type": "4. ",
+        "text": "Loop: The process then loops back, waiting for the input, and continues until the user exits."
       }
     ]
   },
   {
-    "title": "",
+    "title": "Node.js Content - Global.",
     "id": 10,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": " ",
+        "text": "In Node.js there is no window or document. Why? Because Node.js runs outside the browser - it doesn't deal with the DOM or browser-specific APIs."
+      },
+      {
+        "type": " ",
+        "text": "Instead, Node.js has a global object. It's the equivalent of window in the browser but designed for a server-side environment."
       }
     ]
   },
   {
-    "title": "",
+    "title": "What is globalThis?",
     "id": 11,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": " ",
+        "text": "globalThis is a new feature introduced in ECMAScript 2020 (ES11) that provides a standard way to access the global object in any JavaScript environment."
+      },
+      {
+        "type": " ",
+        "text": "What is it useful?"
+      },
+      {
+        "type": "Consistent Access: ",
+        "text": "In the past, accessing the global object varied depending on the environment:"
+      },
+      {
+        "type": "1. ",
+        "text": "Browser: window"
+      },
+      {
+        "type": "2. ",
+        "text": "Node.js: global"
+      },
+      {
+        "type": "3. ",
+        "text": "Web Workers: self"
+      },
+      {
+        "type": "4. ",
+        "text": "Other Environments: Might have there own global objects"
       }
     ]
   },
   {
-    "title": "",
+    "title": "Understanding the NodeJS module system.",
     "id": 12,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "1. ",
+        "text": "Self-contained code unit:"
+      },
+      {
+        "type": "▪ ",
+        "text": "Each file in a Noe.js is treated as a separate file."
+      },
+      {
+        "type": "▪ ",
+        "text": "Variables, functions or objects defined in one file are not accessible by another file by default unless you explicitly export them."
+      },
+      {
+        "type": "2. Encapsulation:",
+        "text": " "
+      },
+      {
+        "type": "▪ ",
+        "text": "Node.js uses the commons module system (module.exports for export and require for import) to ensure the code in one file does not pollute or interfere with the global scope."
+      },
+      {
+        "type": "▪ ",
+        "text": "This makes your code modular, maintainable and easier to debug."
       }
     ]
   },
   {
-    "title": "",
+    "title": "Creating and Organizing Modules.",
     "id": 13,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "// math.js",
+        "text": " "
+      },
+      {
+        "type": "const add = (a, b) => a + b;",
+        "text": " "
+      },
+      {
+        "type": "module.exports = add;",
+        "text": " "
+      },
+      {
+        "type": "// app.js",
+        "text": " "
+      },
+      {
+        "type": "const add = require('./math');",
+        "text": "console.log(add(5, 10));      // Output: 15"
+      }
+    ]
+  },
+  {
+    "title": "Named and Aggregate Exports and Imports.",
+    "id": 14,
+    "content": [
+      {
+        "type": "1. ",
+        "text": "Avoid mixing module.exports and exports.property incorrectly. If you reassign module.exports, it will override any exports.property assignment."
+      },
+      {
+        "type": "2. ",
+        "text": "Use consistent syntax for clarity:"
+      },
+      {
+        "type": "▪ ",
+        "text": "Assign everything at once with module.exports = {...};"
+      },
+      {
+        "type": "▪ ",
+        "text": "Eg: module.exports = {add, sub, multi, div};"
+      },
+      {
+        "type": "▪ ",
+        "text": "Or assign properties individually with module.exports.property."
+      },
+      {
+        "type": "▪ ",
+        "text": "Eg: module.exports.add; module.exports.sub; modules.exports.multi;"
+      },
+      {
+        "type": "3. ",
+        "text": "Also while import:"
+      },
+      {
+        "type": "▪ ",
+        "text": "Assign everything at once like const {...} = require('./math');"
+      },
+      {
+        "type": "▪ ",
+        "text": "Or assign in a variable like const math = require('./math') and use method to apply the function."
+      },
+      {
+        "type": "▪ ",
+        "text": "Eg: const {add, sub, multi, div} = require('./math');"
+      },
+      {
+        "type": "▪ ",
+        "text": "Eg: const math = require('./math'); // math.add, math.sub, math.multi, math.div"
+      }
+    ]
+  },
+  {
+    "title": "Path Module.",
+    "id": 15,
+    "content": [
+      {
+        "type": " ",
+        "text": "In Node.js, path module provides utilities for working with file and directory paths. It's a built-in module, so you don't need to install any external package to use it."
+      },
+      {
+        "type": "const path = require('path');",
+        "text": " "
+      },
+      {
+        "type": "Special Node.js Constants:",
+        "text": " "
+      },
+      {
+        "type": "1. __filename: ",
+        "text": "Provide the absolute path of the currently executing file."
+      },
+      {
+        "type": "2. __dirname: ",
+        "text": "Provide absolute directory path of the currently executing file."
+      }
+    ]
+  },
+  {
+    "title": "Path Module Features.",
+    "id": 16,
+    "content": [
+      {
+        "type": "1. path.parse(): ",
+        "text": "Return an object with details about the given path, including root, dir, name, ext and base."
+      },
+      {
+        "type": "2. path.join(): ",
+        "text": "Joins multiple path segments into one, using the appropriate separator."
+      },
+      {
+        "type": "3. path.resolve(): ",
+        "text": "Resolve a sequence of into an absolute path, starting from the current directory."
+      },
+      {
+        "type": "4. path.extname(): ",
+        "text": "Extracts a file extension from a given path."
+      },
+      {
+        "type": "5. path.basename(): ",
+        "text": "Returns the last part of the path. (eg. file name with extension)"
+      },
+      {
+        "type": "6. path.dirname(): ",
+        "text": "Returns a directory part of a path."
+      },
+      {
+        "type": "7. path.sep: ",
+        "text": "Returns the platform specific path segment separator."
+      }
+    ]
+  },
+  {
+    "title": "Crypto Module.",
+    "id": 17,
+    "content": [
+      {
+        "type": "1. crypto.randomBytes(size)",
+        "text": " "
+      },
+      {
+        "type": " ",
+        "text": "Purpose: Generates cryptographically strong random data."
+      },
+      {
+        "type": " ",
+        "text": "Usage: Useful for creating tokens or unique IDs."
+      },
+      {
+        "type": "2. crypto.createHash(algorithm)",
+        "text": " "
+      },
+      {
+        "type": " ",
+        "text": "Purpose: Creates a hash for a given input using algorithms like sha256."
+      },
+      {
+        "type": " ",
+        "text": "Usage: Ensures data integrity (e.g., verifying file changes)."
+      }
+    ]
+  },
+  {
+    "title": "crypto.randomBytes(size) real-life examples:",
+    "id": 18,
+    "content": [
+      {
+        "type": "1. Token Generation for Password Reset",
+        "text": " "
+      },
+      {
+        "type": "▪ ",
+        "text": "When users request a password reset, generate a secure random token."
+      },
+      {
+        "type": "Example",
+        "text": " "
+      },
+      {
+        "type": " ",
+        "text": "A user clicks 'Forgot Password' → A random token is sent via email → The token is verified during the reset process."
+      },
+      {
+        "type": "2. API Keys and Secret Generation",
+        "text": " "
+      },
+      {
+        "type": "▪ ",
+        "text": "Generate secure API keys for third-party integrations."
+      },
+      {
+        "type": "Example",
+        "text": " "
+      },
+      {
+        "type": " ",
+        "text": "When creating a developer account on platforms like Twitter or GitHub, a unique API key is generated."
+      }
+    ]
+  },
+  {
+    "title": "crypto.createHash(algorithm) real-life examples:",
+    "id": 19,
+    "content": [
+      {
+        "type": "1. Password Hashing (Login Systems)",
+        "text": " "
+      },
+      {
+        "type": "▪ ",
+        "text": "Hash user passwords before storing them in a database to enhance security."
+      },
+      {
+        "type": "Example",
+        "text": " "
+      },
+      {
+        "type": "▪ ",
+        "text": "A user’s password is hashed with sha256 and stored. During login, the entered password is hashed and compared."
+      }
+    ]
+  },
+  {
+    "title": "FS Module using Synchronous way.",
+    "id": 20,
+    "content": [
+      {
+        "type": " ",
+        "text": "The fs (File System) module in Node.js is a core module that allows you to work with the file system, enabling you to read, write, update, delete, and watch files."
+      },
+      {
+        "type": "1. Create:",
+        "text": "Writes content to the file. If the file does not exist, it creates one."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.writeFileSync(filePath, data, options)"
+      },
+      {
+        "type": "2. Read:",
+        "text": "Reads the content of the file asynchronously and logs it."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: const data = fs.readFileSync(filePath, options)"
+      },
+      {
+        "type": "3. Update:",
+        "text": "Appends new content to the file without overwriting the existing content."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.appendFileSync(filePath, data, options)"
+      },
+      {
+        "type": "4. Delete:",
+        "text": "Deletes the file completely."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.unlinkSync(filePath)"
+      },
+      {
+        "type": "5. Rename:",
+        "text": "Renames a file from one name to another."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.renameSync(oldPath, newPath)"
+      }
+    ]
+  },
+  {
+    "title": "FS Module using Asynchronous way.",
+    "id": 21,
+    "content": [
+      {
+        "type": "1. Create:",
+        "text": "Writes data to a file, replacing the file if it already exists."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.writeFile(path, data, options, callback)"
+      },
+      {
+        "type": "2. Read:",
+        "text": "Reads the contents of a file asynchronously and returns the data as a buffer or string."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.readFile(path, options, callback)"
+      },
+      {
+        "type": "3. Update:",
+        "text": "Appends data to a file. If the file doesn’t exist, it is created."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.appendFile(path, data, options, callback)"
+      },
+      {
+        "type": "4. Delete:",
+        "text": "Deletes a file asynchronously."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.unlink(path, callback)"
+      },
+      {
+        "type": "5. Rename:",
+        "text": "Rename a file asynchronously."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.unlink(oldPath, newPath, callback)"
+      },
+      {
+        "type" : "Example: ",
+        "text" : ""
+      }
+    ]
+  },
+  {
+    "title": "FS Module using Promises way.",
+    "id": 22,
+    "content": [
+      {
+        "type": "1. Create:",
+        "text": "Creates or overwrites a file with specified content."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.promises.writeFile(path, data, options).then('File created.').catch()"
+      },
+      {
+        "type": "2. Read:",
+        "text": "The readFile() method reads data from a file."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.promises.readFile(path, options).then((data) => console.log(data)).catch((err) => console.error(err))"
+      },
+      {
+        "type": "3. Update:",
+        "text": "The appendFile() method adds content without overwriting the existing data."
+      },
+      {
+        "type": "▪ ",
+        "text": "syntax: fs.promises.appendFile(path, data, options).then('File updated.').catch()"
+      },
+      {
+        "type": "4. Delete:",
+        "text": "The unlink() method removes the specified file asynchronously."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.promises.unlink(path).then().catch()"
+      }
+    ]
+  },
+  {
+    "title": "FS Module using Async Await Promises way.",
+    "id": 23,
+    "content": [
+      {
+        "type": "1. Create:",
+        "text": "Writes data to a file asynchronously. If the file exists, it overwrites the content."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fs.Promises.writeFile(path, data, options)"
+      },
+      {
+        "type": "2. Read:",
+        "text": "Reads the contents of a file asynchronously."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fsPromises.readFile(path, options)"
+      },
+      {
+        "type": "3. Update:",
+        "text": "Adds content to the end of a file. If the file does not exist, it creates a new one."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fsPromises.appendFile(path, data, options)"
+      },
+      {
+        "type": "4. Delete:",
+        "text": "Deletes a file by its path."
+      },
+      {
+        "type": "▪ ",
+        "text": "Syntax: fsPromises.unlink(path)"
+      }
+    ]
+  },
+  {
+    "title": "Advantages and Use Cases of FS Module.",
+    "id": 24,
+    "content": [
+      {
+        "type": "Advantages:",
+        "text": " "
+      },
+      {
+        "type" : "▪ ",
+        "text" : "No need for manual callbacks."
+      },
+      {
+        "type" : "▪ ",
+        "text" : "Cleaner and more intuitive asynchronous workflows using async/await."
+      },
+      {
+        "type" : "▪ ",
+        "text" : "Suitable for modern JavaScript applications."
+      },
+      {
+        "type" : "Use Cases:",
+        "text" : " "
+      },
+      {
+        "type" : "▪ ",
+        "text" : "Reading Files asynchronously in a non-blocking way."
+      },
+      {
+        "type" : "▪ ",
+        "text" : "Writing or Appending Data to files without blocking the event loop."
+      },
+      {
+        "type" : "▪ ",
+        "text" : "Performing Multiple File Operations sequentially or concurrently with promise chaining."
+      },
+      {
+        "type" : "▪ ",
+        "text" : "Handling Errors Gracefully with .catch() or try...catch blocks."
       }
     ]
   },
   {
     "title": "",
-    "id": 14,
+    "id": 25,
     "content": [
       {
         "type": "",
@@ -141,7 +751,47 @@
   },
   {
     "title": "",
-    "id": 15,
+    "id": 26,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 27,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 28,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 29,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 30,
     "content": [
       {
         "type": "",
