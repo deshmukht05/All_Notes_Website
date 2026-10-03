@@ -32,7 +32,7 @@ h1 {
 }
 
 .accordion-grid {
-  @apply flex gap-5 rounded-t-xl justify-between items-center bg-gray-900 py-2 px-4 sm:py-4 sm:px-6;
+  @apply flex gap-5 rounded-t-xl justify-between items-center bg-[#111d27] border-r-2 border-l-2 border-t-2 border-gray-700 py-2 px-4 sm:py-4 sm:px-6;
 }
 
 .accordion-question {
@@ -40,7 +40,7 @@ h1 {
 }
 
 .content-accordion {
-  @apply bg-gray-900 px-3 py-2 sm:px-6 sm:pb-4 rounded-b-xl;
+  @apply bg-[#111d27] border-r-2 border-l-2 border-b-2 border-gray-700 px-3 py-2 sm:px-6 sm:pb-4 rounded-b-xl;
 }
 
 .content-accordion p {
@@ -85,7 +85,7 @@ h1 {
 
 /* Python Notes */
 .topic-grid {
-  @apply flex rounded-xl gap-4 justify-between items-center bg-gray-900 py-2 px-4 sm:py-4 sm:px-6;
+  @apply flex rounded-xl gap-4 justify-between items-center bg-[#111d27] border-2 border-gray-700 py-2 px-4 sm:py-4 sm:px-6;
 }
 
 iframe {
