@@ -6,7 +6,7 @@ export const NodeContent = ({ curData, isActive }) => {
       {content.map((curEle, id) => {
         const { type, text } = curEle;
         return (
-          <li key={id} className="leading-5 sm:leading-6">
+          <li key={id} className="leading-6 sm:leading-7">
             <p>{isActive && `${type} ${text}`}</p>
           </li>
         );
