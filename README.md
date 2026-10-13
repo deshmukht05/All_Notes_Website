@@ -8,7 +8,7 @@ The website fetches note data from JSON files and displays it dynamically using 
 
 Add your deployed website link here:
 
-[https://all-commbine-notes.vercel.app/]
+https://all-commbine-notes.vercel.app/
 
 Replace the URL above with your actual deployed project URL.
 
