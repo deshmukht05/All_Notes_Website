@@ -7,6 +7,7 @@ import { ReduxNotes } from "../Pages/Redux Notes/ReduxNotes";
 import { PythonNotesData } from "../Pages/Python Notes/PythonNotesData";
 import { SQLNotes } from "../Pages/SQL Notes/SQLNotes";
 import { NodeNotes } from "../Pages/Node JS Notes/NodeNotes";
+import { MongoDBNotes } from "../Pages/MongoDB Notes/MongoDBNotes";
 
 export const AppLayout = () => {
   const [activeTab, setActiveTab] = useState("react");
@@ -29,6 +30,12 @@ export const AppLayout = () => {
             Node JS
           </button>
           <button
+            onClick={() => setActiveTab("mongo")}
+            className={activeTab === "mongo" ? "active-tab" : "inactive-tab"}
+          >
+            MongoDB
+          </button>
+          <button
             onClick={() => setActiveTab("tanstack")}
             className={activeTab === "tanstack" ? "active-tab" : "inactive-tab"}
           >
@@ -42,13 +49,17 @@ export const AppLayout = () => {
           </button>
           <button
             onClick={() => setActiveTab("react-int")}
-            className={activeTab === "react-int" ? "active-tab" : "inactive-tab"}
+            className={
+              activeTab === "react-int" ? "active-tab" : "inactive-tab"
+            }
           >
             React Interview
           </button>
           <button
             onClick={() => setActiveTab("front-int")}
-            className={activeTab === "front-int" ? "active-tab" : "inactive-tab"}
+            className={
+              activeTab === "front-int" ? "active-tab" : "inactive-tab"
+            }
           >
             Frontend Interview
           </button>
@@ -68,6 +79,7 @@ export const AppLayout = () => {
 
         {activeTab === "react" && <ReactNotes />}
         {activeTab === "node" && <NodeNotes />}
+        {activeTab === "mongo" && <MongoDBNotes />}
         {activeTab === "tanstack" && <TanStackNotes />}
         {activeTab === "redux" && <ReduxNotes />}
         {activeTab === "react-int" && <ReactInterview />}

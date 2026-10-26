@@ -1,0 +1,850 @@
+[
+  {
+    "title": "What is MongoDB?",
+    "id": 1,
+    "content": [
+      {
+        "type": "▪ MongoBD is an open source, document oriented NoSQL database management system.",
+        "text": " "
+      },
+      {
+        "type": "▪ Designed for scalability, flexibility and performance in handling unstructured or semi-structured data.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "What is a document database?",
+    "id": 2,
+    "content": [
+      {
+        "type": "A document database (also known as document oriented database or a document store) is a database that stores information in documents.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Difference between SQL and NoSQL.",
+    "id": 3,
+    "content": [
+      {
+        "type": "SQL:",
+        "text": " "
+      },
+      {
+        "type": "▪ SQL databases are relational databases.",
+        "text": " "
+      },
+      {
+        "type": "▪ They use structured tables to store data in rows and columns.",
+        "text": " "
+      },
+      {
+        "type": "▪ Suitable for applications well-defined schemas and fixed data structures.",
+        "text": " "
+      },
+      {
+        "type": "▪ E-commerce platform, HR Management system, etc.",
+        "text": " "
+      },
+      {
+        "type": "▪ Example: MySQL, PostgreSQL, Oracle.",
+        "text": " "
+      },
+      {
+        "type": "NoSQL:",
+        "text": " "
+      },
+      {
+        "type": "▪ NoSQL databases are non-relational databases.",
+        "text": " "
+      },
+      {
+        "type": "▪ They provide flexibility in data storage, allowing varied data types and structures. ",
+        "text": " "
+      },
+      {
+        "type": "▪ Ideal for applications with dynamic or evolving data models.",
+        "text": " "
+      },
+      {
+        "type": "▪ It stores data in the form of documents.",
+        "text": " "
+      },
+      {
+        "type": "▪ MongoDB uses BSON to query databases.",
+        "text": " "
+      },
+      {
+        "type": "▪ CMS, Social media platforms, Gaming platforms.",
+        "text": " "
+      },
+      {
+        "type": "▪ Example: MongoDB, Cassandra, Redis.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "MongoDB Terminology.",
+    "id": 4,
+    "content": [
+      {
+        "type": "Database --> Collections (one or more) --> Documents (one or more)",
+        "text": " "
+      },
+      {
+        "type": "Layer 1: Database",
+        "text": " "
+      },
+      {
+        "type": "Layer 2: We can have multiple 'Collections'.",
+        "text": " "
+      },
+      {
+        "type": "Layer 3: Inside Collections we can have multiple 'Documents'.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "How MongoDB Works?",
+    "id": 5,
+    "content": [
+      {
+        "type": "Frontend: HTML, CSS, JS, React.js, Next.js",
+        "text": " "
+      },
+      {
+        "type": "Backend: Node.js, Express.js, Next.js, Python, PHP",
+        "text": " "
+      },
+      {
+        "type": "Database: MongoDB server contacts with Storage Engine to Read/Write Data Files form the database.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "JSON VS BSON.",
+    "id": 6,
+    "content": [
+      {
+        "type": "▪ In MongoDB, we write in JSON format only but behind the scene data is stored in BSON (Binary JSON) format, a binary representation of JSON.",
+        "text": " "
+      },
+      {
+        "type": "▪ By utilizing BSON, MongoDB can achieve higher read and write speeds, reduce storage requirements, and improved manipulation capabilities, making it well-suited for handling large and complex datasets while maintaining performance efficiency.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Managing Databases and Collections.",
+    "id": 7,
+    "content": [
+      {
+        "type": "Commands:",
+        "text": " "
+      },
+      {
+        "type": "▪ show dbs",
+        "text": " "
+      },
+      {
+        "type": "▪ use 'database_name'",
+        "text": " "
+      },
+      {
+        "type": "▪ db.dropDatabase()",
+        "text": " "
+      },
+      {
+        "type": "▪ show collections",
+        "text": " "
+      },
+      {
+        "type": "▪ db.createCollection('collection-name')",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collection-name.drop()",
+        "text": " "
+      },
+      {
+        "type": "Examples:",
+        "text": " "
+      },
+      {
+        "type": "▪ show dbs",
+        "text": " "
+      },
+      {
+        "type": "▪ use students",
+        "text": " "
+      },
+      {
+        "type": "▪ db.createCollection('data')",
+        "text": " "
+      },
+      {
+        "type": "▪ show collections",
+        "text": " "
+      },
+      {
+        "type": "▪ db.data.drop()",
+        "text": " "
+      },
+      {
+        "type": "▪ db.dropDatabase()",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Inserting Documents in MongoDB.",
+    "id": 8,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 9,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 10,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 11,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 12,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 13,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 14,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 15,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 16,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 17,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 18,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 19,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 20,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 21,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 22,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 23,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 24,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  }
+]
