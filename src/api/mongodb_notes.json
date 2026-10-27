@@ -206,574 +206,876 @@
     "id": 8,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "To insert one document at a time:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "db.collection-name.insertOne({",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "field 1: value 1,",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "field 2: value 2,",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "...",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "});",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example: db.data.insertOne({ name: 'Raju', age: 30 })",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "To insert many documents at a time:",
+        "text": " "
+      },
+      {
+        "type": "db.collection-name.insertMany([",
+        "text": " "
+      },
+      {
+        "type": "{ field 1: value 1, field 2: value 2 },",
+        "text": " "
+      },
+      {
+        "type": "{ field 1: value 1, field 2: value 2 },",
+        "text": " "
+      },
+      {
+        "type": "...",
+        "text": " "
+      },
+      {
+        "type": "]);",
+        "text": " "
+      },
+      {
+        "type": "Example: db.data.insertMany([{ name: 'Nehal', age: 21 }, { name: 'Raman', age: 20 }, { name: 'Giresh', age: 22 }])",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "When to use Quotes and when not to?",
     "id": 9,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Special Characters:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "If a field name contains special characters or spaces, or starts with numeric digits, use of quotes is necessary.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example: db.data.insertOne({ name: 'Raju', age: 30, 'course name': 'Mechanical' })",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Reserved Keywords:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "If a field name is reserved keyword in MongoDB, use quote to distinguish it from reserved keywords.",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Ordered and Unordered Insert.",
     "id": 10,
     "content": [
       {
-        "type": "",
+        "type": "When executing bulk write operations, 'ordered' and 'unordered' determines the batch behavior.",
+        "text": " "
+      },
+      {
+        "type": "▪ Ordered Insert:",
+        "text": " "
+      },
+      {
+        "type": "Default behavior is ordered, where MongoDB stops on the first error and do not insert data present after error.",
+        "text": " "
+      },
+      {
+        "type": "db.<collection-name>.insertMany([ doc1, doc2, ... ]);",
+        "text": " "
+      },
+      {
+        "type": "Example: ",
+        "text": " "
+      },
+      {
+        "type": "db.collection-name.insertMany([",
+        "text": " "
+      },
+      {
+        "type": "{ name: 'Nehal', age: 21 }, ",
+        "text": " "
+      },
+      {
+        "type": "{ _id: ObjectId('6adc387673c0745672f9950b'), name: 'Raman', age: 20 }, ",
+        "text": " "
+      },
+      {
+        "type": "{ name: 'Giresh', age: 22 }])",
+        "text": " "
+      },
+      {
+        "type": "// As Raman data is already present in database, it will show error to insert.",
         "text": ""
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Unordered Insert:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "When executing bulk write operations with unordered flag, MongoDB continues processing after encountering an error.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "db.<collection-name>.insertMany([ doc1, doc2, ... ], { ordered: false });",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example: ",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "db.collection-name.insertMany([",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "{ name: 'Nehal', age: 21 }, ",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "{ _id: ObjectId('6adc387673c0745672f9950b'), name: 'Raman', age: 20 }, ",
+        "text": " "
+      },
+      {
+        "type": "{ name: 'Giresh', age: 22 }",
+        "text": " "
+      },
+      {
+        "type": "], { ordered: false })",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Case Sensitivity in MongoDB.",
     "id": 11,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Collection names are case-sensitive.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Field names within documents are also case-sensitive.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.Product.insertOne({ name: 'Raju', age: 27 }); ",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "▪ db.product.insertOne({ name: 'Nilay', age: 29 });",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Finding Documents in MongoDB.",
     "id": 12,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ find():",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "db.collection_name.find({ key: value })",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example: db.data.find({name: 'Tushar'})",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ findOne():",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "db.collection_name.findOne({ key: value })",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "Example: db.data.findOne({name: 'Tushar'})",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Importing and Exporting JSON in MongoDB.",
     "id": 13,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ mongoimport jsonfile.json –d database_name –c collection_name",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ mongoimport products.json -d shop -c products",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ mongoimport products.json -d shop -c products --jsonArray",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ mongoexport -d shop -c products -o 'C:\\Program Files\\'",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Here, --jsonArray accepts the import of data expressed with multiple MongoDB documents within a single JSON array.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "▪ Limited to imports of 16 MB or smaller.",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Comparison Operators.",
     "id": 14,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $eq: equal to",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $ne: not equal to",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $gt: greater than",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $gte: greater than equal to",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $lt: less than",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $lte: less than equal to",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $in: contains multiple values in array",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $nin: not in",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({ 'price': { $eq: 699 } });",
+        "text": " "
+      },
+      {
+        "type": "▪ db.category.find({ price: { $in: [249, 129, 39] } });",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Introduction to Cursors.",
     "id": 15,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Cursors in MongoDB are used to efficiently retrieve large result sets from queries, providing control over the data retrieval process.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ MongoDB retrieves query results in batches using cursors.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Cursors are a pointer to the result set on the server.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Cursors are used to iterate through query results.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ MongoDB retrieves query results in batches, not all at once.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Default batch size is usually 101 documents.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "▪ This improves memory efficiency and network usage.",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Cursor Methods.",
     "id": 16,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ count()",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ limit()",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ skip()",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ sort()",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "db.products.find({ price: { $gt: 250 } }).count();",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "db.products.find({ price: { $gt: 250 } }).limit(5);",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "db.products.find({ price: { $gt: 250 } }).limit(5).skip(2);",
+        "text": " "
+      },
+      {
+        "type": "db.products.find({ price: { $gt: 1250 } }'.limit(3).sort({ price: 1 });",
+        "text": " "
+      },
+      {
+        "type": "(1) for ascending and (-1) for descending",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Cursor Methods (Caveats).",
     "id": 17,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "1. Performance Implications:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ skip() can be inefficient for large offsets.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Using sort() on large result sets may impact performance.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "2. Use with Caution:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Be caution when using skip() and limit() on large collections.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "▪ Consider using indexing to optimize query performance.",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Logical Operators.",
     "id": 18,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $and",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $or",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $not",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $nor",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Syntax:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { $and: [ { condition1 }, { condition2 }, ... ]}",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { field: { $not: { operator: value } } }",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({$and: [{'price' : {$gt: 100}}, {'name' : 'Diamond Ring'}]})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({$or: [{'price' : {$gt: 100}}, {'name' : 'Diamond Ring'}]})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({$nor: [{'price' : {$gt: 100}}, {'name' : 'Diamond Ring'}]})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({'price' : {$not: {$eq: 100}}})",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Complex Expressions.",
     "id": 19,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ The $expr operator allows using aggregation expressions within a query.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Useful when you need to compare fields from the same document in a more complex manner.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Syntax:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { $expr: { operator: [field, value] } }",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.products.find({ $expr: { $gt: ['$price', 1340] } })",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "▪ db.sales.find({ $expr: { $lt: [{ $subtract: [ '$quantity', '$price' ]}, '$targetPrice' ]} })",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Elements Operator.",
     "id": 20,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $exists",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $type",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ $size",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Syntax:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { field: { $exists: <boolean>} }",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { field: { $type: '<bson-data-type>' } }",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { field: { $size: <array-length> } }",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({'price' : {$exists: true}, 'price': {$gt: 1200}})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({'price' : {$type : 'number'}}).count()",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({'name' : {$type : 2}}).count()",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.find({'comments': {$size: 2}}).count()",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "BSON Type values.",
     "id": 21,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ 1: Double",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ 2: String",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ 3: Object",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ 4: Array",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ 5: Binary Data",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ 6: Undefined",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ 7: Object id",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ 8: Boolean",
+        "text": " "
+      },
+      {
+        "type": "▪ 9: Date",
+        "text": " "
+      },
+      {
+        "type": "▪ 10: Null",
+        "text": " "
+      },
+      {
+        "type": "▪ 11: Regular Expression",
+        "text": " "
+      },
+      {
+        "type": "▪ 12: JavaScript Code",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "Projection.",
     "id": 22,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.collection.find({}, { field1: 1, field2: 1 })",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ To include specific fields, use projection with a value of 1 for the fields you want.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ To exclude fields, use projection with a value of 0 for the fields you want to exclude.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ You cannot include and exclude fields simultaneously in the same query projection.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.comments.find({'comments': {$size: 2}}, {'comments': 1, '_id': 0}) //_id is exceptional",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.comments.find({'comments': {$size: 2}}, {'title': 0})",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.comments.find({'comments': {$size: 2}}, {'comments': 1, 'author': 0,  '_id': 0}) //Not possible",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Embedded Documents.",
+    "id": 23,
+    "content": [
+      {
+        "type": "▪ Query documents inside embedded documents using dot notation.",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collection.find({ 'parent.child' : value })",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.find({'comments.user' : 'Lily'})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.find({'metadata.views' : {$gt: 1200}})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.find({'comments.user' : 'Henry', 'metadata.likes' : {$gt: 50}})",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$all vs $elemMatch.",
+    "id": 24,
+    "content": [
+      {
+        "type": "1. $all:",
+        "text": " "
+      },
+      {
+        "type": "The $all operator selects the documents where the value of a field is an array that contains all the specified elements.",
+        "text": " "
+      },
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ { <field>: { $all: [ <value1> , <value2> ... ] } }",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.find({'comments.user': {$all: ['Alice', 'Vinod']}})",
+        "text": " "
+      },
+      {
+        "type": "2. $elemMatch:",
+        "text": " "
+      },
+      {
+        "type": "The $elemMatch  operator matches documents that contain an array field with at least one element that matches all the specified query criteria.",
+        "text": " "
+      },
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ { <field>: { $elemMatch: { <query1>, <query2>, ... } } }",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.find({'comments' : {$elemMatch: {'user': 'Vinod', 'text' : 'Thanks for sharing.'}}})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.find({'comments' : {$elemMatch: {'user': 'Vinod', 'text' : 'Thanks for sharing.'}}}, {'comments' : 1})",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "updateOne().",
+    "id": 25,
+    "content": [
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collectionName.updateOne( { filter }, { $set: { existingField: newValue, newField: 'new value', // ... }, })",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.updateOne({'_id': ObjectId('64c2363be32f4a51b19b9275')}, {$set: {'price' : 45}})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.updateOne({'name': 'Designer Handbag'}, {$set: {'isFeatured' : true}})",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "updateMany().",
+    "id": 26,
+    "content": [
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collectionName.updateMany( { filter }, { $set: { existingField: newValue, // ... }, })",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.updateMany({price: 120}, {$set: {'isFeatured': true}})",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Removing.",
+    "id": 27,
+    "content": [
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collectionName.updateOne( { filter }, { $unset: { fieldName: 1 } } )",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.updateMany({_id: ObjectId('64c2363be32f4a51b19b9275')}, {$unset: {'PrevPrice': 1}})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.updateMany({'price': {$gt: 10}}, {$unset: {'featured': 1}})",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Rename.",
+    "id": 28,
+    "content": [
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collectionName.updateOne( { filter }, { $rename: { oldFieldName: 'newFieldName' } });",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.updateMany({'price': {$gt: 10}}, {$rename: {'isFeatured': 'featured'}})",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Updating arrays and Embedded Documents.",
+    "id": 29,
+    "content": [
+      {
+        "type": "1. Push",
+        "text": " "
+      },
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collectionName.updateOne( { filter }, { $push: { arrayField: 'new element' } });",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.updateOne({_id: 1}, {$push: {comments: {user: 'Prabhas', text: 'Super Star'}}})",
+        "text": " "
+      },
+      {
+        "type": "2. Pop",
+        "text": " "
+      },
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collectionName.updateOne( { filter }, { $pop: { arrayField: value } });",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.updateOne({_id: 1}, {$pop: {comments: 1})  //It willremove last element of array",
+        "text": " "
       }
     ]
   },
   {
     "title": "",
-    "id": 23,
+    "id": 30,
     "content": [
       {
         "type": "",
@@ -811,7 +1113,45 @@
   },
   {
     "title": "",
-    "id": 24,
+    "id": 31,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 32,
     "content": [
       {
         "type": "",
