@@ -1584,122 +1584,124 @@
     ]
   },
   {
-    "title": "",
+    "title": "$size.",
     "id": 47,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ The $size stage calculates the length of an array field.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Syntax:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { $size: <array> }",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.products.aggregate([ { $project: { name: 1, numberOfColors: { $size: '$colors' } } }]);",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.products.aggregate([ {$match: {'price' : {$gt: 1200}}}, {$unwind: '$colors'} , {$group: {_id: '$price', colors: {$addToSet : '$colors'}}}, {$project: {_id: 1, colors: 1, 'Color Length': {$size: '$colors'}}}])",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "// Projects the name field and calculates the number of colors in the colors array.",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "$limit and $skip.",
     "id": 48,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ The $limit and $skip stages are useful for pagination, limiting, and skipping results.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Syntax:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { $limit: <positive integer> }",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.products.aggregate([ { $skip: 10 }, { $limit: 10 } ]);",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
-      },
-      {
-        "type": "",
-        "text": ""
+        "type": "▪ db.products.aggregate([ {$match: {'price' : {$gt: 1200}}}, {$unwind: '$colors'} , {$group: {_id: '$price', colors: {$addToSet : '$colors'}}}, {$project: {_id: 1, colors: 1, 'Color Length': {$size: '$colors'}}}, {$skip: 1}, {$limit: 1}])",
+        "text": " "
       }
     ]
   },
   {
-    "title": "",
+    "title": "$filter.",
     "id": 49,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ The $filter stage filters elements of an array based on specified conditions.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Syntax: ",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { $project: { <field>: { $filter: { input: '$<array>’, as: '<variable>’, cond: <expression> }}}}",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.col.aggregate([{ $project: { name: 1, testValues: { $filter: { input:  '$values', as: 'val', cond: {$gt: ['$$val', 30]} } } } }])",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$addFields.",
+    "id": 50,
+    "content": [
+      {
+        "type": "▪ The $addFields stage adds new fields to documents in a cleaner way compared to $project.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Syntax:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ { $addFields: { <field1>: <expression1>, ... } }",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([{ $addFields: { discountedPrice: { $subtract: ['$price', 5] } } }])",
+        "text": " "
       }
     ]
   },
   {
     "title": "",
-    "id": 50,
+    "id": 51,
     "content": [
       {
         "type": "",
