@@ -1074,46 +1074,518 @@
     ]
   },
   {
-    "title": "",
+    "title": "Update a field in an embedded document.",
     "id": 30,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "Syntax:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.collectionName.updateOne( { filter }, { $set: { 'arrayField.$.text': 'Updated text' } });",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.comments.updateOne({_id: 7, 'comments.user': 'Vinod'}, {$set: {'comments.$.text' : 'Subscribe now.'}})",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Delete Operations in MongoDB.",
+    "id": 31,
+    "content": [
+      {
+        "type": "Syntax:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.collectionName.deleteOne({ filter });",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.sales.deleteMany({ price: 55 });",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Example:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ db.comments.deleteOne({_id: 7})",
+        "text": " "
+      },
+      {
+        "type": "▪ db.comments.deleteMany({'price': 55})",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "What are Indexes?.",
+    "id": 32,
+    "content": [
+      {
+        "type": "▪ Indexes are specialized data structures that optimize data retrieval speed in MongoDB.",
+        "text": " "
+      },
+      {
+        "type": "▪ Indexes store a fraction of data in a more searchable format.",
+        "text": " "
+      },
+      {
+        "type": "▪ They enable MongoDB to locate data faster during queries.",
+        "text": " "
+      },
+      {
+        "type": "▪ Indexes are separate from collections and multiple indexes can exist per collection.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Benefits of Indexes.",
+    "id": 33,
+    "content": [
+      {
+        "type": "▪ Faster Querying: Indexes drastically accelerate data retrieval, particularly for large collections.",
+        "text": " "
+      },
+      {
+        "type": "▪ Efficient Sorting: Indexes facilitate rapid sorting based on specific fields.",
+        "text": " "
+      },
+      {
+        "type": "▪ Improved Aggregation: Aggregation operations become more efficient with optimized indexes.",
+        "text": " "
+      },
+      {
+        "type": "▪ Indexing on Multiple Fields: Complex queries can be executed efficiently by utilizing multiple fields in indexes.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "explain().",
+    "id": 34,
+    "content": [
+      {
+        "type": "▪ Use explain() method to understand query execution in detail.",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({ name: 'Air Fryer' }).explain();",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({ name: 'Air Fryer' }).explain('executionStats');",
+        "text": " "
+      },
+      {
+        "type": "▪ Use it to measure the time taken to execute a query.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Managing Indexes.",
+    "id": 35,
+    "content": [
+      {
+        "type": "1. Create Index:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.createIndex({ field: 1 });",
+        "text": " "
+      },
+      {
+        "type": "▪ (1) for storing indexes in ascending order.",
+        "text": " "
+      },
+      {
+        "type": "▪ (-1) for storing indexes in descending order.",
+        "text": " "
+      },
+      {
+        "type": "2. Get Indexed present:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collection.getIndexes();",
+        "text": " "
+      },
+      {
+        "type": "▪ _id is a default index.",
+        "text": " "
+      },
+      {
+        "type": "3. Delete Indexes:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collection.dropIndex({ field: 1 });",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collection.dropIndex( 'index_name' );",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Unique and Text Indexes.",
+    "id": 36,
+    "content": [
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collection.createIndex({ field: 1 }, { unique: true })",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collection.createIndex({ field: 'text' });",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.users.createIndex({ email: 1 }, { unique: true })",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Search in Indexes.",
+    "id": 37,
+    "content": [
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.collection.find({ $text: { $search: 'keyword' } });",
+        "text": " "
+      },
+      {
+        "type": "▪ Searching using index is faster than $regex searching.",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.find({ field: { $regex: 'air' } })",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "When not to use Indexes?",
+    "id": 38,
+    "content": [
+      {
+        "type": "1. Indexes on Rarely Used Fields",
+        "text": " "
+      },
+      {
+        "type": "▪ Indexing fields that are seldom used in queries can consume unnecessary space and resources..",
+        "text": " "
+      },
+      {
+        "type": "2. Balancing Act",
+        "text": " "
+      },
+      {
+        "type": "▪ Indexing requires disk space and memory. Overindexing can lead to resource strain and impact overall performance.",
+        "text": " "
+      },
+      {
+        "type": "3. Indexing Small Collections",
+        "text": " "
+      },
+      {
+        "type": "▪ In smaller collections, the cost of index maintenance might outweigh the benefits gained from querying",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "What is Aggregation?",
+    "id": 39,
+    "content": [
+      {
+        "type": "▪ Definition: Aggregation is the process of performing transformations on documents and combining them to produce computed results.",
+        "text": " "
+      },
+      {
+        "type": "▪ Pipeline Stages: Aggregations consist of multiple pipeline stages, each performing a specific operation on the input data.",
+        "text": " "
+      },
+      {
+        "type": "▪ Benefits:",
+        "text": " "
+      },
+      {
+        "type": "a. Aggregating Data: Complex calculations and operations are possible.",
+        "text": " "
+      },
+      {
+        "type": "b. Advanced Transformations: Data can be combined, reshaped, and computed for insights.",
+        "text": " "
+      },
+      {
+        "type": "c. Efficient Processing: Aggregation handles large datasets efficiently.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$match.",
+    "id": 40,
+    "content": [
+      {
+        "type": "The $match stage is similar to the query used as the first argument in .find(). It filters documents based on specified conditions.",
+        "text": " "
+      },
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ { $match: { <query> } }",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ { $match: { 'name': 'Sleek Wooden Tuna' } } ])",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$group.",
+    "id": 41,
+    "content": [
+      {
+        "type": "The $group stage groups documents by specified fields and performs aggregate operations on grouped data.",
+        "text": " "
+      },
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "{ $group: {",
+        "text": " "
+      },
+      {
+        "type": "_id: <expression>, // Group key",
+        "text": " "
+      },
+      {
+        "type": "<field1>: { <accumulator1> : <expression1> },",
+        "text": " "
+      },
+      {
+        "type": "...",
+        "text": " "
+      },
+      {
+        "type": "} }",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([{ $group: { _id: '$company', 'Total Products': { $sum: 1 }}}])",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ { $match: {'price' : { $gt: 1200 } } }, { $group: { _id: '$company', 'Total Products Sum': { $sum: '$price' } } } ])",
+        "text": " "
+      },
+      {
+        "type": "▪ db.sales.aggregate([ { $match: {'quantity' : 5 } }, { $group: { _id: '$quantity', 'Average': { $avg: '$price' } } } ])",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$sort.",
+    "id": 42,
+    "content": [
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ { $sort: { <field>: <order> } }",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ { $sort: { totalProducts: 1 } }])",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ { $match: {'price' : { $gt: 1200 } } }, { $group: { _id: '$company', 'Total Products Sum': { $sum: '$price' } } }, { $sort: { 'Total Products Sum': -1 } } ])",
+        "text": " "
+      },
+      {
+        "type": "▪ (1) for ascending order and (-1) for descending order.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$project.",
+    "id": 43,
+    "content": [
+      {
+        "type": "▪ The $project stage reshapes documents, includes or excludes fields, and performs operations on fields.",
+        "text": " "
+      },
+      {
+        "type": "▪ Projects the name field and calculates a discountedPrice field by subtracting 5 from the price.",
+        "text": " "
+      },
+      {
+        "type": "▪ $sum, $subtract, $multiply, $avg, etc. are types of expression operator.",
+        "text": " "
+      },
+      {
+        "type": "Syntax: ",
+        "text": " "
+      },
+      {
+        "type": "▪ { $project: { <field1>: <expression1>, ... } }",
+        "text": " "
+      },
+      {
+        "type": "Example: ",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ { $project: { name: 1, discountedPrice: { $subtract: ['$price', 5] } } }])",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([{$project: {'price': 1, '_id': 0}}])",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([{$match: {'price' : {$gt: 1200}}}, {$project: {'price': 1, 'Discount': {$multiply: ['$price', 0.8]}}}])",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$push.",
+    "id": 44,
+    "content": [
+      {
+        "type": "The $push stage adds elements to an array field within documents.",
+        "text": " "
+      },
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ { $push: <expression> }",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ { $group: { _id: { company: '$company' }, products: { $push: '$name' } } }])",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ {$match: {'price' : {$gt: 1200}}}, {$group: {_id: '$price', 'All Colors:': {$push : '$colors'}}} ])",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$unwind.",
+    "id": 45,
+    "content": [
+      {
+        "type": "The $unwind stage deconstructs an array field and produces multiple documents.",
+        "text": " "
+      },
+      {
+        "type": "Syntax:",
+        "text": " "
+      },
+      {
+        "type": "▪ { $unwind: <array> }",
+        "text": " "
+      },
+      {
+        "type": "Example:",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ { $unwind: '$colors' }, { $group: { _id: { company: '$company' }, products: { $push: '$colors' } } } ])",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ {$match: {'price' : {$gt: 1200}}}, {$unwind: '$colors'} , {$group: {_id: '$price', 'All Colors:': {$push : '$colors'}}} ])",
+        "text": " "
+      },
+      {
+        "type": "// Deconstructs the colors array field, groups products by company, and creates an array of colors for each company.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "$addToSet.",
+    "id": 46,
+    "content": [
+      {
+        "type": "▪ The $addToSet stage adds elements to an array field while preventing duplicates.",
+        "text": " "
+      },
+      {
+        "type": "▪ Groups products by company and creates an array of unique colors for each company.",
+        "text": " "
+      },
+      {
+        "type": "Example: ",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ { $unwind: '$colors' }, { $group: { _id: { company: '$company' }, products: { $addToSet: '$colors' } } }])",
+        "text": " "
+      },
+      {
+        "type": "▪ db.products.aggregate([ {$match: {'price' : {$gt: 1200}}}, {$unwind: '$colors'} , {$group: {_id: '$price', 'All Colors:': {$addToSet : '$colors'}}}])",
+        "text": " "
       }
     ]
   },
   {
     "title": "",
-    "id": 31,
+    "id": 47,
     "content": [
       {
         "type": "",
@@ -1151,7 +1623,83 @@
   },
   {
     "title": "",
-    "id": 32,
+    "id": 48,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 49,
+    "content": [
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": ""
+      }
+    ]
+  },
+  {
+    "title": "",
+    "id": 50,
     "content": [
       {
         "type": "",
