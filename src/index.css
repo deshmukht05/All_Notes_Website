@@ -36,7 +36,7 @@ h1 {
 }
 
 .accordion-question {
-  @apply text-[14px] sm:text-[16px] font-medium tracking-wide text-white;
+  @apply text-[15px] sm:text-[16px] font-medium tracking-wide text-white;
 }
 
 .content-accordion {
@@ -44,16 +44,16 @@ h1 {
 }
 
 .content-accordion p {
-  @apply text-[14px] sm:text-[16px] leading-5.5 sm:leading-6;
+  @apply text-[15px] sm:text-[16px] leading-6.5;
 }
 
 /* Toggle Button */
 .deactive-btn {
-  @apply py-2 px-3 text-white text-[12px] sm:text-[14px] sm:py-2 sm:px-4 bg-green-700 rounded font-semibold cursor-pointer;
+  @apply py-2 px-3 text-white text-[13px] sm:text-[14px] sm:py-2 sm:px-4 bg-green-700 rounded font-semibold cursor-pointer;
 }
 
 .active-btn {
-  @apply py-2 px-3 bg-red-700 text-[12px] sm:text-[14px] sm:py-2 sm:px-4 rounded font-medium text-white cursor-pointer;
+  @apply py-2 px-3 bg-red-700 text-[13px] sm:text-[14px] sm:py-2 sm:px-4 rounded font-medium text-white cursor-pointer;
 }
 
 /* Active Tab */

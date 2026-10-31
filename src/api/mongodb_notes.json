@@ -1700,40 +1700,88 @@
     ]
   },
   {
-    "title": "",
+    "title": "Introduction to MongoDB Atlas.",
     "id": 51,
     "content": [
       {
-        "type": "",
-        "text": ""
+        "type": "▪ MongoDB Atlas is MongoDB's fully managed cloud database service.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ It offers an easy way to deploy, manage, and scale MongoDB databases in the cloud.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Atlas eliminates the need for manual setup and maintenance, allowing developers to focus on their applications.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ It provides automated scaling options to accommodate growing workloads.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ Atlas supports global clusters, enabling databases to be deployed across multiple regions for better data availability and reduced latency.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Introduction to Mongoose.",
+    "id": 52,
+    "content": [
+      {
+        "type": "▪ Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js that provides schema-based data modeling, validation, and high‑level APIs for CRUD operations. ",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "▪ It enforces structured schemas on MongoDB’s flexible collections, adds middleware, type casting, and query‑building features, and simplifies application‑database interaction.",
+        "text": " "
+      }
+    ]
+  },
+  {
+    "title": "Why Mongoose instead of official driver?",
+    "id": 53,
+    "content": [
+      {
+        "type": "1. Structured Schemas:",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "Mongoose lets you define your data's structure using schemas which makes it easier to understand your database structure and work with it.",
+        "text": " "
       },
       {
-        "type": "",
-        "text": ""
+        "type": "2. Validation:",
+        "text": " "
+      },
+      {
+        "type": "Mongoose provides built-in validation to ensure validity before saving it to database.",
+        "text": " "
+      },
+      {
+        "type": "3. Relationships:",
+        "text": " "
+      },
+      {
+        "type": "MongoDB doesn’t provide relations itself. So, Mongoose helps to replicate relations in MongoDB and helps us to relate schemas with each other easily (one-to-one, one-to-many, etc.)",
+        "text": " "
+      },
+      {
+        "type": "4. Middleware:",
+        "text": " "
+      },
+      {
+        "type": "Mongoose offers running custom functions before or after certain operations which can be useful in many cases.",
+        "text": " "
+      },
+      {
+        "type": "5. Complex Queries:",
+        "text": " "
+      },
+      {
+        "type": "MongoDB helps to write complex queries, aggregations, etc. with simpler syntax to help us to work on projects easily.",
+        "text": " "
       }
     ]
   }

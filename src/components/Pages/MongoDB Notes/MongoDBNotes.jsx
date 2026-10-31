@@ -11,7 +11,7 @@ export const MongoDBNotes = () => {
 
   return (
     <>
-      <h1>ReactJS Notes</h1>
+      <h1>MongoDB Notes</h1>
       <ul className="section-accordion">
         {mongoNotes.map((curEle) => {
           return (

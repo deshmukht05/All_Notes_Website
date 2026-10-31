@@ -14,23 +14,23 @@
     "id": 2,
     "content": [
       {
-        "type": "1. ",
+        "type": "▪ ",
         "text": "Open source, server-side JavaScript runtime."
       },
       {
-        "type": "2. ",
+        "type": "▪ ",
         "text": "Allows you to run JavaScript on your machine or on servers."
       },
       {
-        "type": "3. ",
+        "type": "▪ ",
         "text": "Built on the V8 JavaScript engine for speed."
       },
       {
-        "type": "4. ",
+        "type": "▪ ",
         "text": "Robust ecosystem with npm."
       },
       {
-        "type": "5. ",
+        "type": "▪",
         "text": "Node is all about Modules."
       }
     ]
